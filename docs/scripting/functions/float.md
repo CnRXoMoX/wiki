@@ -5,11 +5,9 @@ description: Converts an integer into a float.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -33,5 +31,5 @@ FloatValue = float(Value);   // Converts Value(52) into a float and stores it in
 
 ## Related Functions
 
-- [floatround](../functions/floatround): Convert a float to an integer (rounding).
-- [floatstr](../functions/floatstr): Convert an string to a float.
+- [floatround](floatround): Convert a float to an integer (rounding).
+- [floatstr](floatstr): Convert an string to a float.

@@ -5,11 +5,9 @@ description: Set an argument that was passed to a function.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -27,5 +25,5 @@ Set an argument that was passed to a function.
 
 ## Related Functions
 
-- [getarg](../functions/getarg): Retrieve an argument from a variable argument list.
-- [numargs](../functions/numargs): Return the number of arguments.
+- [getarg](getarg): Retrieve an argument from a variable argument list.
+- [numargs](numargs): Return the number of arguments.

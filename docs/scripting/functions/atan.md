@@ -5,11 +5,9 @@ description: Get the inversed value of an arc tangent in radians.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -40,6 +38,6 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [floatsin](../../scripting/functions/floatsin.md): Get the sine from a specific angle.
-- [floatcos](../../scripting/functions/floatcos.md): Get the cosine from a specific angle.
-- [floattan](../../scripting/functions/floattan.md): Get the tangent from a specific angle.
+- [floatsin](floatsin.md): Get the sine from a specific angle.
+- [floatcos](floatcos.md): Get the cosine from a specific angle.
+- [floattan](floattan.md): Get the tangent from a specific angle.

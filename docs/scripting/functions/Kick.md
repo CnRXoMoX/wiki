@@ -34,7 +34,7 @@ As of SA-MP 0.3x, any action taken directly before Kick() (such as sending a mes
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(strcmp(cmdtext, "/kickme", true) == 0)
+    if (strcmp(cmdtext, "/kickme", true) == 0)
     {
         // Kick the player who executed this command.
 
@@ -58,5 +58,5 @@ public DelayedKick(playerid)
 
 ## Related Functions
 
-- [Ban](../../scripting/functions/Ban.md): Ban a player from playing on the server.
-- [BanEx](../../scripting/functions/BanEx.md): Ban a player with a custom reason.
+- [Ban](Ban.md): Ban a player from playing on the server.
+- [BanEx](BanEx.md): Ban a player with a custom reason.

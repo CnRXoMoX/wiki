@@ -5,11 +5,9 @@ description: Get the health of an actor.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -31,16 +29,16 @@ NOTE: The actor's health is stored in the specified variable, not in the return 
 ## Examples
 
 ```c
-new MyActor;
+new gMyActor;
 
 public OnGameModeInit()
 {
-    MyActor = CreateActor(179, 316.1, -134.0, 999.6, 90.0); // Actor as salesperson in Ammunation
-    SetActorHealth(MyActor, 100);
+    gMyActor = CreateActor(179, 316.1, -134.0, 999.6, 90.0); // Actor as salesperson in Ammunation
+    SetActorHealth(gMyActor, 100);
 
     new Float:actorHealth;
-    GetActorHealth(MyActor, actorHealth);
-    printf("Actor ID %d has %.2f health.", MyActor, actorHealth);
+    GetActorHealth(gMyActor, actorHealth);
+    printf("Actor ID %d has %.2f health.", gMyActor, actorHealth);
     return 1;
 }
 ```

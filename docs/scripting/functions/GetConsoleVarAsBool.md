@@ -23,7 +23,7 @@ The value of the specified console variable. 0 if the specified console variable
 public OnGameModeInit()
 {
     new queryEnabled = GetConsoleVarAsBool("query");
-    if(!queryEnabled)
+    if (!queryEnabled)
     {
         print("WARNING: Querying is disabled. The server will appear offline in the server browser.");
     }
@@ -41,5 +41,5 @@ Type 'varlist' in the server console to display a list of available console vari
 
 ## Related Functions
 
-- [GetConsoleVarAsString](../functions/GetConsoleVarAsString): Retreive a server variable as a string.
-- [GetConsoleVarAsInt](../functions/GetConsoleVarAsInt): Retreive a server variable as an integer.
+- [GetConsoleVarAsString](GetConsoleVarAsString): Retreive a server variable as a string.
+- [GetConsoleVarAsInt](GetConsoleVarAsInt): Retreive a server variable as an integer.

@@ -5,11 +5,9 @@ description: Calculates the square root of given value.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -39,5 +37,5 @@ This function raises a “domain” error if the input value is negative. You ma
 
 ## Related Functions
 
-- [floatpower](../functions/floatpower): Raises given value to a power of exponent.
-- [floatlog](../functions/floatlog): Get the logarithm of the float value.
+- [floatpower](floatpower): Raises given value to a power of exponent.
+- [floatlog](floatlog): Get the logarithm of the float value.

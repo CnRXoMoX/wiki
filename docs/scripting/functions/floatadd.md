@@ -5,11 +5,9 @@ description: Adds two floats together.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -38,6 +36,6 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [Floatsub](../functions/Floatsub): Subtracts two floats.
-- [Floatmul](../functions/Floatmul): Multiplies two floats.
-- [Floatdiv](../functions/Floatdiv): Divides a float by another.
+- [Floatsub](Floatsub): Subtracts two floats.
+- [Floatmul](Floatmul): Multiplies two floats.
+- [Floatdiv](Floatdiv): Divides a float by another.

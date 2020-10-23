@@ -5,11 +5,9 @@ description: Allows you to open and close the windows of a vehicle.
 tags: ["vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -29,6 +27,6 @@ Allows you to open and close the windows of a vehicle.
 
 ## Related Functions
 
-- SetVehicleParamsCarDoors: Open and close the doors of a vehicle.
-- GetVehicleParamsCarDoors: Retrive the current state of a vehicle's doors.
-- GetVehicleParamsCarWindows: Retrive the current state of a vehicle's windows
+- [SetVehicleParamsCarDoors](SetVehicleParamsCarDoors.md): Open and close the doors of a vehicle.
+- [GetVehicleParamsCarDoors](GetVehicleParamsCarDoors.md): Retrive the current state of a vehicle's doors.
+- [GetVehicleParamsCarWindows](GetVehicleParamsCarWindows.md): Retrive the current state of a vehicle's windows

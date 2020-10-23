@@ -23,17 +23,17 @@ Shows a previously created menu for a player.
 ## Examples
 
 ```c
-new Menu:MENU_PlayerTeleport;
+new Menu:gPlayerTeleport;
 
 public OnGameModeInit()
 {
-    MENU_PlayerTeleport = CreateMenu(...);
+    gPlayerTeleport = CreateMenu(...);
     return 1;
 }
 
-if(strcmp(cmdtext, "/tele", true) == 0)
+if (strcmp(cmdtext, "/tele", true) == 0)
 {
-    ShowMenuForPlayer(MENU_PlayerTeleport, playerid);
+    ShowMenuForPlayer(gPlayerTeleport, playerid);
     return 1;
 }
 ```
@@ -48,9 +48,9 @@ Crashes the both server and player if an invalid menu ID given.
 
 ## Related Functions
 
-- [CreateMenu](../../scripting/functions/CreateMenu.md): Create a menu.
-- [AddMenuItem](../../scripting/functions/AddMenuItem.md): Adds an item to a specified menu.
-- [SetMenuColumnHeader](../../scripting/functions/SetMenuColumnHeader.md): Set the header for one of the columns in a menu.
-- [DestroyMenu](../../scripting/functions/DestroyMenu.md): Destroy a menu.
-- [OnPlayerSelectedMenuRow](../../scripting/callbacks/OnPlayerSelectedMenuRow.md): Called when a player selected a row in a menu.
-- [OnPlayerExitedMenu](../../scripting/callbacks/OnPlayerExitedMenu.md): Called when a player exits a menu.
+- [CreateMenu](CreateMenu.md): Create a menu.
+- [AddMenuItem](AddMenuItem.md): Adds an item to a specified menu.
+- [SetMenuColumnHeader](SetMenuColumnHeader.md): Set the header for one of the columns in a menu.
+- [DestroyMenu](DestroyMenu.md): Destroy a menu.
+- [OnPlayerSelectedMenuRow](../callbacks/OnPlayerSelectedMenuRow.md): Called when a player selected a row in a menu.
+- [OnPlayerExitedMenu](../callbacks/OnPlayerExitedMenu.md): Called when a player exits a menu.

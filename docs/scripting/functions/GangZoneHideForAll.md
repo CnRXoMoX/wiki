@@ -20,19 +20,19 @@ This function does not return any specific values.
 ## Examples
 
 ```c
-new gangzone;
-gangzone = GangZoneCreate(1248.011, 2072.804, 1439.348, 2204.319);
-GangZoneHideForAll(gangzone);
+new gGangZoneId;
+gGangZoneId = GangZoneCreate(1248.011, 2072.804, 1439.348, 2204.319);
+GangZoneHideForAll(gGangZoneId);
 ```
 
 ## Related Functions
 
-- [GangZoneCreate](../functions/GangZoneCreate): Create a gangzone.
-- [GangZoneDestroy](../functions/GangZoneDestroy): Destroy a gangzone.
-- [GangZoneShowForPlayer](../functions/GangZoneShowForPlayer): Show a gangzone for a player.
-- [GangZoneShowForAll](../functions/GangZoneShowForAll): Show a gangzone for all players.
-- [GangZoneHideForPlayer](../functions/GangZoneHideForPlayer): Hide a gangzone for a player.
-- [GangZoneFlashForPlayer](../functions/GangZoneFlashForPlayer): Make a gangzone flash for a player.
-- [GangZoneFlashForAll](../functions/GangZoneFlashForAll): Make a gangzone flash for all players.
-- [GangZoneStopFlashForPlayer](../functions/GangZoneStopFlashForPlayer): Stop a gangzone flashing for a player.
-- [GangZoneStopFlashForAll](../functions/GangZoneStopFlashForAll): Stop a gangzone flashing for all players.
+- [GangZoneCreate](GangZoneCreate): Create a gangzone.
+- [GangZoneDestroy](GangZoneDestroy): Destroy a gangzone.
+- [GangZoneShowForPlayer](GangZoneShowForPlayer): Show a gangzone for a player.
+- [GangZoneShowForAll](GangZoneShowForAll): Show a gangzone for all players.
+- [GangZoneHideForPlayer](GangZoneHideForPlayer): Hide a gangzone for a player.
+- [GangZoneFlashForPlayer](GangZoneFlashForPlayer): Make a gangzone flash for a player.
+- [GangZoneFlashForAll](GangZoneFlashForAll): Make a gangzone flash for all players.
+- [GangZoneStopFlashForPlayer](GangZoneStopFlashForPlayer): Stop a gangzone flashing for a player.
+- [GangZoneStopFlashForAll](GangZoneStopFlashForAll): Stop a gangzone flashing for all players.

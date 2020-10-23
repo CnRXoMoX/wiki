@@ -9,10 +9,10 @@ tags: ["player"]
 
 Set the skin of a player. A player's skin is their character model.
 
-| Name     | Description                              |
-| -------- | ---------------------------------------- |
-| playerid | The ID of the player to set the skin of. |
-| skinid   | The skin the player should use.          |
+| Name     | Description                                              |
+| -------- | -------------------------------------------------------- |
+| playerid | The ID of the player to set the skin of.                 |
+| skinid   | The [skin](../resources/skins.md) the player should use. |
 
 ## Returns
 
@@ -27,7 +27,7 @@ Note that 'success' is reported even when skin ID is invalid (not 0-311, or 74),
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(strcmp(cmdtext, "/fireman", true) == 0)
+    if (strcmp(cmdtext, "/fireman", true) == 0)
     {
         // Set the player's skin to ID 277, which is a fireman.
         SetPlayerSkin(playerid, 277);
@@ -35,30 +35,44 @@ public OnPlayerCommandText(playerid, cmdtext[])
     }
     return 0;
 }
-stock SetPlayerSkinFix(playerid, skinid)
+
+SetPlayerSkinFix(playerid, skinid)
 {
+    if (!IsPlayerConnected(playerid))
+    {
+        return 0;
+    }
+
     new
         Float:tmpPos[4],
         vehicleid = GetPlayerVehicleID(playerid),
         seatid = GetPlayerVehicleSeat(playerid);
+
     GetPlayerPos(playerid, tmpPos[0], tmpPos[1], tmpPos[2]);
     GetPlayerFacingAngle(playerid, tmpPos[3]);
-    if(skinid < 0 || skinid > 299) return 0;
-    if(GetPlayerSpecialAction(playerid) == SPECIAL_ACTION_DUCK)
+
+    // If the skinid is invalid, less than 0 or more than 311 or is equal to 74 (invalid skin), then do nothing
+    if (0 > skinid > 311 || skinid == 74)
+    {
+        return 0;
+    }
+
+    if (GetPlayerSpecialAction(playerid) == SPECIAL_ACTION_DUCK)
     {
         SetPlayerPos(playerid, tmpPos[0], tmpPos[1], tmpPos[2]);
         SetPlayerFacingAngle(playerid, tmpPos[3]);
-        TogglePlayerControllable(playerid, 1); // preventing any freeze - optional
+        TogglePlayerControllable(playerid, true); // preventing any freeze - optional
         return SetPlayerSkin(playerid, skinid);
     }
-    else if(IsPlayerInAnyVehicle(playerid))
+    else if (IsPlayerInAnyVehicle(playerid))
     {
         new
             tmp;
+
         RemovePlayerFromVehicle(playerid);
         SetPlayerPos(playerid, tmpPos[0], tmpPos[1], tmpPos[2]);
         SetPlayerFacingAngle(playerid, tmpPos[3]);
-        TogglePlayerControllable(playerid, 1); // preventing any freeze - important - because of doing animations of exiting vehicle
+        TogglePlayerControllable(playerid, true); // preventing any freeze - important! because of doing animations of exiting vehicle
         tmp = SetPlayerSkin(playerid, skinid);
         PutPlayerInVehicle(playerid, vehicleid, (seatid == 128) ? 0 : seatid);
         return tmp;
@@ -74,15 +88,11 @@ stock SetPlayerSkinFix(playerid, skinid)
 
 :::warning
 
-Known Bug(s):
-If a player's skin is set when they are crouching, in a vehicle, or performing certain animations, they will become frozen or otherwise glitched. This can be fixed by using TogglePlayerControllable. Players can be detected as being crouched through GetPlayerSpecialAction (SPECIAL_ACTION_DUCK).
-Other players around the player may crash if he is in a vehicle or if he is entering/leaving a vehicle.
-Setting a player's skin when he is dead may crash players around him.
-Breaks sitting on bikes.
+Known Bug(s): If a player's skin is set when they are crouching, in a vehicle, or performing certain animations, they will become frozen or otherwise glitched. This can be fixed by using TogglePlayerControllable. Players can be detected as being crouched through GetPlayerSpecialAction (SPECIAL_ACTION_DUCK). Other players around the player may crash if he is in a vehicle or if he is entering/leaving a vehicle. Setting a player's skin when he is dead may crash players around him. Breaks sitting on bikes.
 
 :::
 
 ## Related Functions
 
-- GetPlayerSkin: Get a player's current skin.
-- SetSpawnInfo: Set the spawn setting for a player.
+- [GetPlayerSkin](GetPlayerSkin.md): Get a player's current skin.
+- [SetSpawnInfo](SetSpawnInfo.md): Set the spawn setting for a player.

@@ -5,11 +5,9 @@ description: Creates a chat bubble above a player's name tag.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -41,14 +39,13 @@ public OnPlayerText(playerid, text[])
 
 :::tip
 
-You can't see your own chatbubbles. The same applies to attached 3D text labels.
+You can't see your own chat bubbles. The same applies to attached 3D text labels.
 
 :::
 
 :::tip
 
-You can use color embedding for multiple colors in the message.
-Using '-1' as the color will make the text white (for the simple reason that -1, when represented in hexadecimal notation, is 0xFFFFFFFF).
+You can use color embedding for multiple colors in the message. Using '-1' as the color will make the text white (for the simple reason that -1, when represented in hexadecimal notation, is 0xFFFFFFFF).
 
 :::
 

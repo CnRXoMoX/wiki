@@ -5,11 +5,9 @@ description: Allows a player to edit an object (position and rotation) using the
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3e and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3e' />
 
 ## Description
 
@@ -38,7 +36,7 @@ public OnGameModeInit()
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(!strcmp(cmdtext, "/oedit", true))
+    if (!strcmp(cmdtext, "/oedit", true))
     {
         EditObject(playerid, object);
         SendClientMessage(playerid, 0xFFFFFFFF, "SERVER: You can now edit the object!");
@@ -58,10 +56,10 @@ You can move the camera while editing by pressing and holding the spacebar (or W
 
 ## Related Functions
 
-- [CreateObject](../functions/CreateObject): Create an object.
-- [DestroyObject](../functions/DestroyObject): Destroy an object.
-- [MoveObject](../functions/MoveObject): Move an object.
-- [EditPlayerObject](../functions/EditPlayerObject): Edit an object.
-- [EditAttachedObject](../functions/EditAttachedObject): Edit an attached object.
-- [SelectObject](../functions/SelectObject): Select an object.
-- [CancelEdit](../functions/CancelEdit): Cancel the edition of an object.
+- [CreateObject](CreateObject): Create an object.
+- [DestroyObject](DestroyObject): Destroy an object.
+- [MoveObject](MoveObject): Move an object.
+- [EditPlayerObject](EditPlayerObject): Edit an object.
+- [EditAttachedObject](EditAttachedObject): Edit an attached object.
+- [SelectObject](SelectObject): Select an object.
+- [CancelEdit](CancelEdit): Cancel the edition of an object.

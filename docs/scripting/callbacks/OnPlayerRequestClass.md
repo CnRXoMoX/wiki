@@ -23,7 +23,7 @@ It is always called first in filterscripts.
 ```c
 public OnPlayerRequestClass(playerid,classid)
 {
-    if(classid == 3 && !IsPlayerAdmin(playerid))
+    if (classid == 3 && !IsPlayerAdmin(playerid))
     {
         SendClientMessage(playerid, COLOR_RED, "This skin is only for admins!");
         return 0;
@@ -42,4 +42,4 @@ This callback is also called when a player presses F4.
 
 ## Related Functions
 
-- [AddPlayerClass](../../scripting/functions/AddPlayerClass.md): Add a class.
+- [AddPlayerClass](../functions/AddPlayerClass.md): Add a class.

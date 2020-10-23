@@ -5,11 +5,9 @@ description: Get the ID of the vehicle the player is looking at.
 tags: ["player", "vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -41,10 +39,10 @@ public OnPlayerConnect(playerid)
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(!strcmp(cmdtext, "/check", true))
+    if (!strcmp(cmdtext, "/check", true))
     {
         new vehicleid = GetPlayerCameraTargetVehicle(playerid);
-        if(vehicleid == globalVehicleID)
+        if (vehicleid == globalVehicleID)
         {
              SendClientMessage(playerid, -1, "You're looking at your vehicle!");
         }
@@ -74,7 +72,7 @@ This function is disabled by default to save bandwidth. Use EnablePlayerCameraTa
 
 ## Related Functions
 
-- [GetPlayerCameraTargetPlayer](../functions/GetPlayerCameraTargetPlayer): Get the ID of the player a player is looking at.
-- [GetPlayerCameraTargetObject](../functions/GetplayerCameraTargetObject): Get the ID of the object a player is looking at.
-- [EnablePlayerCameraTarget](../functions/EnablePlayerCameraTarget): Enable player camera targetting functions.
-- [GetPlayerCameraFrontVector](../functions/GetPlayercameraFrontVector): Get the player's camera fron
+- [GetPlayerCameraTargetPlayer](GetPlayerCameraTargetPlayer): Get the ID of the player a player is looking at.
+- [GetPlayerCameraTargetObject](GetplayerCameraTargetObject): Get the ID of the object a player is looking at.
+- [EnablePlayerCameraTarget](EnablePlayerCameraTarget): Enable player camera targetting functions.
+- [GetPlayerCameraFrontVector](GetPlayercameraFrontVector): Get the player's camera fron

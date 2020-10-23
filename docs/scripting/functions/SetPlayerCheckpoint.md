@@ -29,22 +29,22 @@ Sets a checkpoint (red cylinder) for a player. Also shows a red blip on the rada
 // In this example the player's checkpoint will be set when they spawn.
 // On entering the checkpoint they will receive $1000 and the checkpoint will be disabled.
 
-new bool:onCheck[MAX_PLAYERS];
+new bool: gOnCheck[MAX_PLAYERS];
 
 public OnPlayerSpawn(playerid)
 {
     SetPlayerCheckpoint(playerid, 1982.6150, -220.6680, -0.2432, 3.0);
-    onCheck[playerid] = true;
+    gOnCheck[playerid] = true;
     return 1;
 }
 
 public OnPlayerEnterCheckpoint(playerid)
 {
-    if(onCheck[playerid]) // if it's true
+    if (gOnCheck[playerid]) // if it's true
     {
         GivePlayerMoney(playerid, 1000);
         DisablePlayerCheckpoint(playerid);
-        onCheck[playerid] = false;
+        gOnCheck[playerid] = false;
     }
     return 1;
 }
@@ -60,12 +60,12 @@ Checkpoints are asynchronous, meaning only one can be shown at a time. To 'strea
 
 ## Related Functions
 
-- DisablePlayerCheckpoint: Disable the player's current checkpoint.
-- IsPlayerInCheckpoint: Check if a player is in a checkpoint.
-- SetPlayerRaceCheckpoint: Create a race checkpoint for a player.
-- DisablePlayerRaceCheckpoint: Disable the player's current race checkpoint.
-- IsPlayerInRaceCheckpoint: Check if a player is in a race checkpoint.
-- OnPlayerEnterCheckpoint: Called when a player enters a checkpoint.
-- OnPlayerLeaveCheckpoint: Called when a player leaves a checkpoint.
-- OnPlayerEnterRaceCheckpoint: Called when a player enters a race checkpoint.
-- OnPlayerLeaveRaceCheckpoint: Called when a player leaves a race checkpoint.
+- [DisablePlayerCheckpoint](DisablePlayerCheckpoint.md): Disable the player's current checkpoint.
+- [IsPlayerInCheckpoint](IsPlayerInCheckpoint.md): Check if a player is in a checkpoint.
+- [SetPlayerRaceCheckpoint](SetPlayerRaceCheckpoint.md): Create a race checkpoint for a player.
+- [DisablePlayerRaceCheckpoint](DisablePlayerRaceCheckpoint.md): Disable the player's current race checkpoint.
+- [IsPlayerInRaceCheckpoint](IsPlayerInRaceCheckpoint.md): Check if a player is in a race checkpoint.
+- [OnPlayerEnterCheckpoint](../callbacks/OnPlayerEnterCheckpoint.md): Called when a player enters a checkpoint.
+- [OnPlayerLeaveCheckpoint](../callbacks/OnPlayerLeaveCheckpoint.md): Called when a player leaves a checkpoint.
+- [OnPlayerEnterRaceCheckpoint](../callbacks/OnPlayerEnterRaceCheckpoint.md): Called when a player enters a race checkpoint.
+- [OnPlayerLeaveRaceCheckpoint](../callbacks/OnPlayerLeaveRaceCheckpoint.md): Called when a player leaves a race checkpoint.

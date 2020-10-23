@@ -5,11 +5,9 @@ description: Toggles a player object camera collision.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -22,7 +20,9 @@ Toggles a player object camera collision.
 
 ## Returns
 
-1 - Regardless of if the object exists or not.
+1: The function was executed successfully.
+
+0: The function failed to execute. The object specified does not exist.
 
 ## Examples
 
@@ -31,7 +31,7 @@ public OnPlayerObjectMoved(playerid, objectid)
 {
     new Float:objX, Float:objY, Float:objZ;
     GetPlayerObjectPos(playerid, objectid, objX, objY, objZ);
-    if(objX >= 3000.0 && objY >= 3000.0)
+    if (objX >= 3000.0 && objY >= 3000.0)
     {
         SetPlayerObjectNoCameraCol(playerid, objectid);
     }
@@ -49,4 +49,4 @@ This does not work inside the normal SA map boundaries.
 
 ## Related Functions
 
-- SetObjectNoCameraCol: Disables collisions between camera and object.
+- [SetObjectNoCameraCol](SetObjectNoCameraCol.md): Disables collisions between camera and object.

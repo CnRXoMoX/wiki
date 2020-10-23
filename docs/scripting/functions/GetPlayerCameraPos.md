@@ -5,11 +5,9 @@ description: Get the position of the player's camera.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -51,8 +49,8 @@ Player's camera positions are only updated once a second, unless aiming.It is re
 
 ## Related Functions
 
-- [SetPlayerCameraPos](../functions/SetPlayerCameraPos): Set a player's camera position.
-- [GetPlayerCameraZoom](../functions/GetPlayerCameraZoom): Get the zoom level of a player's camera.
-- [GetPlayerCameraAspectRatio](../functions/GetPlayerCameraAspectRation): Get the aspect ratio of a player's camera.
-- [GetPlayerCameraMode](../functions/GetplayerCameraMode): Get a player's camera mode.
-- [GetPlayerCameraFrontVector](../functions/GetPlayerCameraFrontVector): Get the player's camera front vector
+- [SetPlayerCameraPos](SetPlayerCameraPos): Set a player's camera position.
+- [GetPlayerCameraZoom](GetPlayerCameraZoom): Get the zoom level of a player's camera.
+- [GetPlayerCameraAspectRatio](GetPlayerCameraAspectRation): Get the aspect ratio of a player's camera.
+- [GetPlayerCameraMode](GetplayerCameraMode): Get a player's camera mode.
+- [GetPlayerCameraFrontVector](GetPlayerCameraFrontVector): Get the player's camera front vector

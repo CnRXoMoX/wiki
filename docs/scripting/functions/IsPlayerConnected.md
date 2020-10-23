@@ -24,8 +24,14 @@ Checks if a player is connected (if an ID is taken by a connected player).
 ```c
 KillPlayer(playerid)
 {
-    if(!IsPlayerConnected(playerid)) printf("Player ID %i is not connected!", playerid);
-    else SetPlayerHealth(playerid, 0);
+    if (!IsPlayerConnected(playerid))
+    {
+        printf("Player ID %i is not connected!", playerid);
+    }
+    else
+    {
+        SetPlayerHealth(playerid, 0);
+    }
 }
 ```
 
@@ -39,6 +45,6 @@ This function can be omitted in a lot of cases. Many other functions already hav
 
 ## Related Functions
 
-- [IsPlayerAdmin](../../scripting/functions/IsPlayerAdmin.md): Checks if a player is logged into RCON.
-- [OnPlayerConnect](../../scripting/callbacks/OnPlayerConnect.md): Called when a player connects to the server.
-- [OnPlayerDisconnect](../../scripting/callbacks/OnPlayerDisconnect.md): Called when a player leaves the server.
+- [IsPlayerAdmin](IsPlayerAdmin.md): Checks if a player is logged into RCON.
+- [OnPlayerConnect](../callbacks/OnPlayerConnect.md): Called when a player connects to the server.
+- [OnPlayerDisconnect](../callbacks/OnPlayerDisconnect.md): Called when a player leaves the server.

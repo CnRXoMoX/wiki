@@ -5,11 +5,9 @@ description: This function will return the current direction of player's aiming 
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -66,11 +64,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 :::tip
 
-In 0.3a the camera front vector is only obtainable when player is inside a rhino, S.W.A.T tank, fire truck, or on foot.
-Since 0.3b the camera data can be obtained when the player is in any vehicle or on foot.
+In 0.3a the camera front vector is only obtainable when player is inside a rhino, S.W.A.T tank, fire truck, or on foot. Since 0.3b the camera data can be obtained when the player is in any vehicle or on foot.
 
 :::
 
 ## Related Functions
 
-- [GetPlayerCameraPos](../functions/GetPlayerCameraPos): Find out where the player's camera is.
+- [GetPlayerCameraPos](GetPlayerCameraPos): Find out where the player's camera is.

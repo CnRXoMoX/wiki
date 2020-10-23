@@ -20,20 +20,20 @@ This function does not return any specific values.
 ## Examples
 
 ```c
-new TextID;
+new Text: gMyTextdraw;
 
-TextID = TextDrawCreate(...);
+gMyTextdraw = TextDrawCreate(...);
 
 
 //Later on
-TextDrawShowForAll(TextID);
+TextDrawShowForAll(gMyTextdraw);
 
 //Even later on
-TextDrawHideForAll(TextID);
+TextDrawHideForAll(gMyTextdraw);
 ```
 
 ## Related Functions
 
-- [TextDrawShowForPlayer](../functions/TextDrawShowForPlayer.md): Show a textdraw for a certain player.
-- [TextDrawHideForPlayer](../functions/TextDrawHideForPlayer.md): Hide a textdraw for a certain player.
-- [TextDrawShowForAll](../functions/TextDrawShowForAll.md): Show a textdraw for all players.
+- [TextDrawShowForPlayer](TextDrawShowForPlayer.md): Show a textdraw for a certain player.
+- [TextDrawHideForPlayer](TextDrawHideForPlayer.md): Hide a textdraw for a certain player.
+- [TextDrawShowForAll](TextDrawShowForAll.md): Show a textdraw for all players.

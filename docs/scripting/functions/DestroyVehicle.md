@@ -24,7 +24,7 @@ Destroy a vehicle. It will disappear instantly.
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-     if(strcmp(cmdtext, "/destroyveh", true) == 0)
+     if (strcmp(cmdtext, "/destroyveh", true) == 0)
      {
           new vehicleid = GetPlayerVehicleID(playerid);
           DestroyVehicle(vehicleid);
@@ -37,6 +37,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 ## Related Functions
 
-- [CreateVehicle](../../scripting/functions/CreateVehicle.md): Create a vehicle.
-- [RemovePlayerFromVehicle](../../scripting/functions/RemovePlayerFromVehicle.md): Throw a player out of their vehicle.
-- [SetVehicleToRespawn](../../scripting/functions/SetVehicleToRespawn.md): Respawn a vehicle.
+- [CreateVehicle](CreateVehicle.md): Create a vehicle.
+- [RemovePlayerFromVehicle](RemovePlayerFromVehicle.md): Throw a player out of their vehicle.
+- [SetVehicleToRespawn](SetVehicleToRespawn.md): Respawn a vehicle.

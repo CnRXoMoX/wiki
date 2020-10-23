@@ -5,9 +5,13 @@ description: Sets the various visual damage statuses of a vehicle, such as poppe
 tags: ["vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
+<T.VersionWarn version='SA-MP 0.3a' />
+
+:::tip
+
+For some useful functions for working with vehicle damage values, see [here](../resources/damagestatus.md).
 
 :::
 
@@ -30,23 +34,16 @@ This function does not return any specific values.
 ## Examples
 
 ```c
-new panels, doors, lights, tires;
+new
+	panels, doors, lights, tires;
 GetVehicleDamageStatus(vehicleid, panels, doors, lights, tires);
-UpdateVehicleDamageStatus(vehicleid, panels, doors, lights, 15); //Setting tires to 15 will pop them all
+UpdateVehicleDamageStatus(vehicleid, panels, doors, lights, 15); // Setting tires to 15 will pop them all
 ```
-
-## Notes
-
-:::tip
-
-For some useful functions for working with vehicle damage values, see here.
-
-:::
 
 ## Related Functions
 
-- [SetVehicleHealth](../functions/SetVehicleHealth.md): Set the health of a vehicle.
-- [GetVehicleHealth](../functions/GetVehicleHealth.md): Check the health of a vehicle.
-- [RepairVehicle](../functions/RepairVehicle.md): Fully repair a vehicle.
-- [GetVehicleDamageStatus](../functions/GetVehicleDamageStatus.md): Get the vehicle damage state for each part individually.
+- [SetVehicleHealth](SetVehicleHealth.md): Set the health of a vehicle.
+- [GetVehicleHealth](GetVehicleHealth.md): Check the health of a vehicle.
+- [RepairVehicle](RepairVehicle.md): Fully repair a vehicle.
+- [GetVehicleDamageStatus](GetVehicleDamageStatus.md): Get the vehicle damage state for each part individually.
 - [OnVehicleDamageStatusUpdate](../callbacks/OnVehicleDamageStatusUpdate.md): Called when a vehicle's damage state changes.

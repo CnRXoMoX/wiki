@@ -5,32 +5,26 @@ description: Hashes a password using the SHA-256 hashing algorithm.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 R1 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7 R1' />
 
 ## Description
 
 Hashes a password using the SHA-256 hashing algorithm. Includes a salt. The output is always 256 bits in length, or the equivalent of 64 Pawn cells.
 
-
-| Name | Description |
-|------|-------------|
-|password[] | The password to hash.|
-|salt[] | The salt to use in the hash.|
-|ret_hash[] | The returned hash in uppercase hexadecimal digest.|
-|ret_hash_len | The returned hash maximum length.|
-
+| Name         | Description                                        |
+| ------------ | -------------------------------------------------- |
+| password[]   | The password to hash.                              |
+| salt[]       | The salt to use in the hash.                       |
+| ret_hash[]   | The returned hash in uppercase hexadecimal digest. |
+| ret_hash_len | The returned hash maximum length.                  |
 
 ## Returns
 
- The hash is stored in the specified array.
-
+The hash is stored in the specified array.
 
 ## Examples
-
 
 ```c
 public OnGameModeInit()
@@ -42,7 +36,6 @@ public OnGameModeInit()
 }
 ```
 
-
 ## Notes
 
 :::tip
@@ -51,17 +44,11 @@ The returned hash has zero padding (i.e. possible prefix 00ABCD123...).
 
 :::
 
-
 :::tip
 
-
-The salt is appended to the end of the password, meaning password 'foo' and salt 'bar' would form 'foobar'.
-The salt should be random, unique for each player and at least as long as the hashed password. It is to be stored alongside the actual hash in the player's account.
-
-
+The salt is appended to the end of the password, meaning password 'foo' and salt 'bar' would form 'foobar'. The salt should be random, unique for each player and at least as long as the hashed password. It is to be stored alongside the actual hash in the player's account.
 
 :::
-
 
 :::warning
 
@@ -69,7 +56,4 @@ This function is not binary-safe. Using binary values on password and salt might
 
 :::
 
-
 ## Related Functions
-
-

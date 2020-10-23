@@ -25,13 +25,14 @@ Set the Z rotation (yaw) of a vehicle.
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(strcmp(cmdtext, "/flip", true) == 0)
+    if (strcmp(cmdtext, "/flip", true) == 0)
     {
-        new currentveh;
-        new Float:angle;
-        currentveh = GetPlayerVehicleID(playerid);
-        GetVehicleZAngle(currentveh, angle);
-        SetVehicleZAngle(currentveh, angle);
+        new
+            currentVehicle,
+            Float: angle;
+        currentVehicle = GetPlayerVehicleID(playerid);
+        GetVehicleZAngle(currentVehicle, angle);
+        SetVehicleZAngle(currentVehicle, angle);
         SendClientMessage(playerid, 0xFFFFFFFF, "Your vehicle has been flipped.");
         return 1;
     }
@@ -42,14 +43,13 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 ## Notes
 
-:::tip
+:::**tip**
 
-A vehicle's X and Y (pitch and roll) rotation will be reset when this function is used. The X and Y rotations can not be set.
-This function does not work on unoccupied vehicles (It is believed to be a GTA limitation).
+A vehicle's X and Y (pitch and roll) rotation will be reset when this function is used. The X and Y rotations can not be set. This function does not work on unoccupied vehicles (It is believed to be a GTA limitation).
 
 :::
 
 ## Related Functions
 
-- GetVehicleZAngle: Check the current angle of a vehicle.
-- SetVehiclePos: Set the position of a vehicle.
+- [GetVehicleZAngle](GetVehicleZAngle.md): Check the current angle of a vehicle.
+- [SetVehiclePos](SetVehiclePos.md): Set the position of a vehicle.

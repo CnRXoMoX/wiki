@@ -20,18 +20,20 @@ This function always returns 0.
 ## Examples
 
 ```c
-new connect_timer[MAX_PLAYERS];
+new
+    gConnectTimer[MAX_PLAYERS] = {-1, ...};
 
 public OnPlayerConnect(playerid)
 {
     print("Starting timer...");
-    connect_timer[playerid] = SetTimerEx("WelcomeTimer", 5000, true, "i", playerid);
+    gConnectTimer[playerid] = SetTimerEx("WelcomeTimer", 5000, true, "i", playerid);
     return 1;
 }
 
 public OnPlayerDisconnect(playerid)
 {
-    KillTimer(connect_timer[playerid]);
+    KillTimer(gConnectTimer[playerid]);
+    gConnectTimer[playerid] = -1;
     return 1;
 }
 
@@ -44,5 +46,5 @@ public WelcomeTimer(playerid)
 
 ## Related Functions
 
-- [SetTimer](../../scripting/functions/SetTimer.md): Set a timer.
-- [SetTimerEx](../../scripting/functions/SetTimerEx.md): Set a timer with parameters.
+- [SetTimer](SetTimer.md): Set a timer.
+- [SetTimerEx](SetTimerEx.md): Set a timer with parameters.

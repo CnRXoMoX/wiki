@@ -22,7 +22,7 @@ The interior ID the player is currently in
 ```c
 public OnPlayerCommandText(playerid,text[])
 {
-    if(strcmp(cmdtext,"/int",true) == 0)
+    if (strcmp(cmdtext,"/int",true) == 0)
     {
         new string[128];
         format(string, sizeof(string), "You are in interior %i",GetPlayerInterior(playerid));
@@ -43,5 +43,5 @@ Always returns 0 for NPCs.
 
 ## Related Functions
 
-- [SetPlayerInterior](../functions/SetPlayerInterior): Set a player's interior.
-- [GetPlayerVirtualWorld](../functions/GetPlayerVirtualWorld): Check what virtual world a player is in.
+- [SetPlayerInterior](SetPlayerInterior): Set a player's interior.
+- [GetPlayerVirtualWorld](GetPlayerVirtualWorld): Check what virtual world a player is in.

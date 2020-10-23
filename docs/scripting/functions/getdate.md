@@ -5,11 +5,9 @@ description: Get the current server date, which will be stored in the variables 
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -36,4 +34,4 @@ printf("Days since the start of the year: %d", Days);
 
 ## Related Functions
 
-- [gettime](../functions/gettime): Get the current time of the server as a unix timestamp.
+- [gettime](gettime): Get the current time of the server as a unix timestamp.

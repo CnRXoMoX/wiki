@@ -5,11 +5,9 @@ description: Multiplies two floats with each other.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -46,6 +44,6 @@ This function is rather redundant, for it is no different than the conventional 
 
 ## Related Functions
 
-- [Floatadd](../functions/Floatadd): Adds two floats.
-- [Floatsub](../functions/Floatsub): Subtracts two floats.
-- [Floatdiv](../functions/Floatdiv): Divides a float by another.
+- [Floatadd](Floatadd): Adds two floats.
+- [Floatsub](Floatsub): Subtracts two floats.
+- [Floatdiv](Floatdiv): Divides a float by another.

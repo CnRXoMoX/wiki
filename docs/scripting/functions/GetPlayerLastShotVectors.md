@@ -5,11 +5,9 @@ description: Retrieves the start and end (hit) position of the last bullet a pla
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3z and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3z' />
 
 ## Description
 
@@ -38,7 +36,7 @@ The position of the last bullet is stored in the specified variables.
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(strcmp(cmdtext, "/lastshot", true) == 0)
+    if (strcmp(cmdtext, "/lastshot", true) == 0)
     {
         new lsString[128],
             Float:fOriginX, Float:fOriginY, Float:fOriginZ,
@@ -57,14 +55,13 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 :::warning
 
-This function will only work when lag compensation is enabled.
-If the player hit nothing, the hit positions will be 0. This means you can't currently calculate how far a bullet travels through open air.
+This function will only work when lag compensation is enabled. If the player hit nothing, the hit positions will be 0. This means you can't currently calculate how far a bullet travels through open air.
 
 :::
 
 ## Related Functions
 
-- GetPlayerWeaponData: Find out information about weapons a player has.
-- GetPlayerWeapon: Check what weapon a player is currently holding.
-- VectorSize: Get the length (norm) of a vector.
-- OnPlayerWeaponShot: Called when a player fires a weapon.
+- [GetPlayerWeaponData](GetPlayerWeaponData.md): Find out information about weapons a player has.
+- [GetPlayerWeapon](GetPlayerWeapon.md): Check what weapon a player is currently holding.
+- [VectorSize](VectorSize.md): Get the length (norm) of a vector.
+- [OnPlayerWeaponShot](../callbacks/OnPlayerWeaponShot.md): Called when a player fires a weapon.

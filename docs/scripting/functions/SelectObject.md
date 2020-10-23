@@ -5,34 +5,28 @@ description: Display the cursor and allow the player to select an object.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3e and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3e' />
 
 ## Description
 
 Display the cursor and allow the player to select an object. OnPlayerSelectObject is called when the player selects an object.
 
-
-| Name | Description |
-|------|-------------|
-|playerid | The ID of the player that should be able to select the object|
-
+| Name     | Description                                                   |
+| -------- | ------------------------------------------------------------- |
+| playerid | The ID of the player that should be able to select the object |
 
 ## Returns
 
 This function does not return any specific values.
 
-
 ## Examples
-
 
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(!strcmp(cmdtext, "/select", true))
+    if (!strcmp(cmdtext, "/select", true))
     {
         SelectObject(playerid);
         SendClientMessage(playerid, 0xFFFFFFFF, "SERVER: Please select the object you'd like to edit!");
@@ -42,15 +36,13 @@ public OnPlayerCommandText(playerid, cmdtext[])
 }
 ```
 
-
 ## Related Functions
 
-
--  CreateObject: Create an object.
--  DestroyObject: Destroy an object.
--  MoveObject: Move an object.
--  EditObject: Edit an object.
--  EditPlayerObject: Edit an object.
--  EditAttachedObject: Edit an attached object.
--  CancelEdit: Cancel the edition of an object.
--  OnPlayerSelectObject: Called when a player selected an object.
+- [CreateObject](CreateObject.md): Create an object.
+- [DestroyObject](DestroyObject.md): Destroy an object.
+- [MoveObject](MoveObject.md): Move an object.
+- [EditObject](EditObject.md): Edit an object.
+- [EditPlayerObject](EditPlayerObject.md): Edit an object.
+- [EditAttachedObject](EditAttachedObject.md): Edit an attached object.
+- [CancelEdit](CancelEdit.md): Cancel the edition of an object.
+- [OnPlayerSelectObject](../callbacks/OnPlayerSelectObject.md): Called when a player selected an object.

@@ -5,11 +5,9 @@ description: Convert a string to an integer.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -32,12 +30,11 @@ new iValue = strval(string); // iValue is now '250'
 
 ## Related Functions
 
-- [strcmp](../functions/strcmp): Compare two strings to check if they are the same.
-- [strfind](../functions/strfind): Search for a string in another string.
-- [strtok](../functions/strtok): Get the next 'token' (word/parameter) in a string.
-- [strins](../function/strins): Insert text into a string.
-- [strlen](../function/strlen): Get the length of a string.
-- [strmid](../functions/strmid): Extract part of a string into another string.
-- [strpack](../functions/strpack): Pack a string into a destination string.
-- [strcat](../functions/strcat): Concatenate two strings into a destination reference.
-- [strdel](../functions/strdel): Delete part of a string.
+- [strcmp](strcmp.md): Compare two strings to see if they are the same.
+- [strfind](strfind.md): Search for a substring in a string.
+- [strdel](strdel.md): Delete part/all of a string.
+- [strins](strins.md): Put a string into another string.
+- [strlen](strlen.md): Check the length of a string.
+- [strmid](strmid.md): Extract characters from a string.
+- [strpack](strpack.md): Pack a string into a destination.
+- [strcat](strcat.md): Concatenate two strings into a destination reference.

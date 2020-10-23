@@ -5,11 +5,9 @@ description: Get the fractional part of a float.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -31,4 +29,4 @@ new Float:fFract = floatfract(3.14159); // returns 0.14159
 
 ## Related Functions
 
-- [floatround](../functions/floatround): Convert a float to an integer (rounding).
+- [floatround](floatround): Convert a float to an integer (rounding).

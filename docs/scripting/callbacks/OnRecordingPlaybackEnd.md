@@ -5,19 +5,13 @@ description: This callback is called when a recorded file being reproduced with 
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This NPC callback was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn name='NPC callback' version='SA-MP 0.3a' />
 
 ## Description
 
 This callback is called when a recorded file being reproduced with NPC:StartRecordingPlayback has reached to its end.
-
-| Name | Description |
-| ---- | ----------- |
-
 
 ## Examples
 
@@ -30,5 +24,5 @@ public OnRecordingPlaybackEnd()
 
 ## Related Functions
 
-- NPC:StartRecordingPlayback: Starts reproducing an already recorded .rec file.
-- NPC:StopRecordingPlayback: Stops reproducing a .rec file.
+- [NPC:StartRecordingPlayback](NPC:StartRecordingPlayback.md): Starts reproducing an already recorded .rec file.
+- [NPC:StopRecordingPlayback](NPC:StopRecordingPlayback.md): Stops reproducing a .rec file.

@@ -5,18 +5,6 @@ description: .
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
-
-## Description
-
-.
-
-| Name | Description |
-| ---- | ----------- |
-
-
-## Related Functions
+<T.LowercaseNote />

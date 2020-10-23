@@ -5,11 +5,9 @@ description: Get the model ID of an object (CreateObject).
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -32,4 +30,4 @@ new modelid = GetObjectModel(objectid);
 
 ## Related Functions
 
-- [GetPlayerObjectModel](../functions/GetPlayerObjectModel): Get the model ID of a player-object.
+- [GetPlayerObjectModel](GetPlayerObjectModel): Get the model ID of a player-object.

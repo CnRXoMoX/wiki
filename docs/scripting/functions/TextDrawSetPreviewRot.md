@@ -5,11 +5,9 @@ description: Sets the rotation and zoom of a 3D model preview textdraw.
 tags: ["textdraw"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3x and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3x' />
 
 ## Description
 
@@ -29,17 +27,17 @@ This function does not return any specific values.
 ## Examples
 
 ```c
-new Text:textdraw
+new Text: gMyTextdraw
 
 public OnGameModeInit()
 {
-    textdraw = TextDrawCreate(320.0, 240.0, "_");
-    TextDrawFont(textdraw, TEXT_DRAW_FONT_MODEL_PREVIEW);
-    TextDrawUseBox(textdraw, 1);
-    TextDrawBoxColor(textdraw, 0x000000FF);
-    TextDrawTextSize(textdraw, 40.0, 40.0);
-    TextDrawSetPreviewModel(textdraw, 411);
-    TextDrawSetPreviewRot(textdraw, -10.0, 0.0, -20.0, 1.0);
+    gMyTextdraw = TextDrawCreate(320.0, 240.0, "_");
+    TextDrawFont(gMyTextdraw, TEXT_DRAW_FONT_MODEL_PREVIEW);
+    TextDrawUseBox(gMyTextdraw, 1);
+    TextDrawBoxColor(gMyTextdraw, 0x000000FF);
+    TextDrawTextSize(gMyTextdraw, 40.0, 40.0);
+    TextDrawSetPreviewModel(gMyTextdraw, 411);
+    TextDrawSetPreviewRot(gMyTextdraw, -10.0, 0.0, -20.0, 1.0);
     //You still have to use TextDrawShowForAll/TextDrawShowForPlayer to make the textdraw visible.
     return 1;
 }
@@ -55,8 +53,8 @@ The textdraw MUST use the font type TEXT_DRAW_FONT_MODEL_PREVIEW and already hav
 
 ## Related Functions
 
-- [PlayerTextDrawSetPreviewRot](../functions/PlayerTextDrawSetPreviewRot.md): Set rotation of a 3D player textdraw preview.
-- [TextDrawSetPreviewModel](../functions/TextDrawSetPreviewModel.md): Set the 3D preview model of a textdraw.
-- [TextDrawSetPreviewVehCol](../functions/TextDrawSetPreviewVehCol.md): Set the colours of a vehicle in a 3D textdraw preview.
-- [TextDrawFont](../functions/TextDrawFont.md): Set the font of a textdraw.
+- [PlayerTextDrawSetPreviewRot](PlayerTextDrawSetPreviewRot.md): Set rotation of a 3D player textdraw preview.
+- [TextDrawSetPreviewModel](TextDrawSetPreviewModel.md): Set the 3D preview model of a textdraw.
+- [TextDrawSetPreviewVehCol](TextDrawSetPreviewVehCol.md): Set the colours of a vehicle in a 3D textdraw preview.
+- [TextDrawFont](TextDrawFont.md): Set the font of a textdraw.
 - [OnPlayerClickTextDraw](../callbacks/OnPlayerClickTextDraw.md): Called when a player clicks on a textdraw.

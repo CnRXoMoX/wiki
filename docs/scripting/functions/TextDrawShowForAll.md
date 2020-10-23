@@ -22,12 +22,12 @@ Shows a textdraw for all players.
 ## Examples
 
 ```c
-new Text:textid = TextDrawCreate(100.0, 100.0, "Hello!");
-TextDrawShowForAll(textid);
+new Text: textId = TextDrawCreate(100.0, 100.0, "Hello!");
+TextDrawShowForAll(textId);
 ```
 
 ## Related Functions
 
-- [TextDrawShowForPlayer](../functions/TextDrawShowForPlayer.md): Show a textdraw for a certain player.
-- [TextDrawHideForPlayer](../functions/TextDrawHideForPlayer.md): Hide a textdraw for a certain player.
-- [TextDrawHideForAll](../functions/TextDrawHideForAll.md): Hide a textdraw for all players.
+- [TextDrawShowForPlayer](TextDrawShowForPlayer.md): Show a textdraw for a certain player.
+- [TextDrawHideForPlayer](TextDrawHideForPlayer.md): Hide a textdraw for a certain player.
+- [TextDrawHideForAll](TextDrawHideForAll.md): Hide a textdraw for all players.

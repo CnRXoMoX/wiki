@@ -5,12 +5,9 @@ description: This callback is called when a vehicle is streamed out for a player
 tags: ["vehicle"]
 ---
 
+import T from '../../../src/components/templates.js'
 
-:::warning
-
-This callback was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn name='callback' version='SA-MP 0.3a' />
 
 ## Description
 
@@ -39,10 +36,6 @@ public OnVehicleStreamOut(vehicleid, forplayerid)
 
 ## Notes
 
-:::tip
-
-This callback can also be called by NPC.
-
-:::
+<T.TipNPCCallbacks />
 
 ## Related Functions

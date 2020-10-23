@@ -5,11 +5,9 @@ description: Converts a string to a float.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -32,5 +30,5 @@ SetPlayerPos(playerid, 0, 0, floatstr(before));
 
 ## Related Functions
 
-- [floatround](../functions/floatround): Convert a float to an integer (rounding).
-- [float](../functions/float): Convert an integer to a float.
+- [floatround](floatround): Convert a float to an integer (rounding).
+- [float](float): Convert an integer to a float.

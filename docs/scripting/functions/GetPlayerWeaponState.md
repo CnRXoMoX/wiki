@@ -2,32 +2,26 @@
 id: GetPlayerWeaponState
 title: GetPlayerWeaponState
 description: Check the state of a player's weapon.
-tags: ['player']
+tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
 Check the state of a player's weapon.
 
-
-| Name | Description |
-|------|-------------|
-|playerid | The ID of the player to obtain the weapon state of.|
-
+| Name     | Description                                         |
+| -------- | --------------------------------------------------- |
+| playerid | The ID of the player to obtain the weapon state of. |
 
 ## Returns
 
 The state of the player's weapon. 0 if player specified does not exist.
 
-
 ## Examples
-
 
 ```c
 public OnPlayerSpawn(playerid)
@@ -37,8 +31,6 @@ public OnPlayerSpawn(playerid)
 }
 ```
 
-
 ## Related Functions
 
-
--  GivePlayerWeapon: Give a player a weapon.
+- [GivePlayerWeapon](GivePlayerWeapon.md): Give a player a weapon.

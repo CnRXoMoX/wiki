@@ -25,9 +25,10 @@ public OnRconCommand(cmd[])
     printf("[RCON]: You typed '/rcon %s'!", cmd);
     return 0;
 }
+
 public OnRconCommand(cmd[])
 {
-    if(!strcmp(cmd, "hello", true))
+    if (!strcmp(cmd, "hello", true))
     {
         SendClientMessageToAll(0xFFFFFFAA, "Hello World!");
         print("You said hello to the world."); // This will appear to the player who typed the rcon command in the chat in white
@@ -41,10 +42,7 @@ public OnRconCommand(cmd[])
 
 :::tip
 
-"/rcon " is not included in "cmd" when a player types a command.
-If you use the "print" function here, it will send a message to the player who typed the command in-game as well as the log.
-This callback is not called when the player is not logged in as RCON admin.
-When the player is not logged in as RCON admin and uses /rcon login, this callback will not be called and OnRconLoginAttempt is called instead. However, when the player is logged in as RCON admin, the use of this command will call this callback.
+"/rcon " is not included in "cmd" when a player types a command. If you use the "print" function here, it will send a message to the player who typed the command in-game as well as the log. This callback is not called when the player is not logged in as RCON admin. When the player is not logged in as RCON admin and uses /rcon login, this callback will not be called and OnRconLoginAttempt is called instead. However, when the player is logged in as RCON admin, the use of this command will call this callback.
 
 :::
 
@@ -56,5 +54,5 @@ You will need to include this callback in a loaded filterscript for it to work i
 
 ## Related Functions
 
-- [IsPlayerAdmin](../../scripting/functions/IsPlayerAdmin.md): Checks if a player is logged into RCON.
-- [OnRconLoginAttempt](../../scripting/callbacks/OnRconLoginAttempt.md): Called when an attempt to login to RCON is made.
+- [IsPlayerAdmin](../functions/IsPlayerAdmin.md): Checks if a player is logged into RCON.
+- [OnRconLoginAttempt](OnRconLoginAttempt.md): Called when an attempt to login to RCON is made.

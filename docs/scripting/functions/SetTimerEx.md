@@ -47,7 +47,6 @@ public OnPlayerSpawn(playerid)
 
 // Forward (make public) the function so the server can 'see' it
 forward EndAntiSpawnKill(playerid);
-
 // The timer function - the code to be executed when the timer is called goes here
 public EndAntiSpawnKill(playerid)
 {
@@ -64,15 +63,13 @@ public EndAntiSpawnKill(playerid)
 
 :::tip
 
-Timer ID variables should be initialized to -1 when they can to minimise the chance of accidentally killing timer ID 0 by mistake (or use timer ID 0 up at the start of OnGameModeInit).
-Timer intervals are not accurate (roughly 25% off). There are fixes available here and here.
-The function to be called must be public. That means it has to be forwarded.
+Timer ID variables should be initialized to -1 when they can to minimise the chance of accidentally killing timer ID 0 by mistake (or use timer ID 0 up at the start of OnGameModeInit). Timer intervals are not accurate (roughly 25% off). There are fixes available here and here. The function to be called must be public. That means it has to be forwarded.
 
 :::
 
 ## Related Functions
 
-- SetTimer: Set a timer.
-- KillTimer: Stop a timer.
-- CallLocalFunction: Call a function in the script.
-- CallRemoteFunction: Call a function in any loaded script.
+- [SetTimer](SetTimer.md): Set a timer.
+- [KillTimer](KillTimer.md): Stop a timer.
+- [CallLocalFunction](CallLocalFunction.md): Call a function in the script.
+- [CallRemoteFunction](CallRemoteFunction.md): Call a function in any loaded script.

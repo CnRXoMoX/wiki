@@ -5,9 +5,13 @@ description: This callback is called when a vehicle element such as doors, tires
 tags: ["vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This callback was added in SA-MP 0.3a and will not work in earlier versions!
+<T.VersionWarn name='callback' version='SA-MP 0.3a' />
+
+:::tip
+
+For some useful functions for working with vehicle damage values, see [here](../resources/damagestatus.md).
 
 :::
 
@@ -50,17 +54,11 @@ public OnVehicleDamageStatusUpdate(vehicleid, playerid)
 
 :::tip
 
-This does not include vehicle health changes
-
-:::
-
-:::tip
-
-For some useful functions for working with vehicle damage values, see here.
+This does not include vehicle health changes.
 
 :::
 
 ## Related Functions
 
-- [GetVehicleDamageStatus](../../scripting/functions/GetVehicleDamageStatus.md): Get the vehicle damage state for each part individually.
-- [UpdateVehicleDamageStatus](../../scripting/functions/UpdateVehicleDamageStatus.md): Update the vehicle damage.
+- [GetVehicleDamageStatus](../functions/GetVehicleDamageStatus.md): Get the vehicle damage state for each part individually.
+- [UpdateVehicleDamageStatus](../functions/UpdateVehicleDamageStatus.md): Update the vehicle damage.

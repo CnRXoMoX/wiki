@@ -5,11 +5,9 @@ description: This function allows you to get the logarithm of a float value.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -36,5 +34,5 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [floatsqroot](../functions/floatsqroot): Calculate the square root of a floating point value.
-- [floatpower](../functions/floatpower): Raises given value to a power of exponent.
+- [floatsqroot](floatsqroot): Calculate the square root of a floating point value.
+- [floatpower](floatpower): Raises given value to a power of exponent.

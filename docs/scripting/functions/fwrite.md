@@ -5,11 +5,9 @@ description: Write text into a file.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -31,7 +29,7 @@ The length of the written string as an integer.
 new File:handle = fopen("file.txt", io_write);
 
 // Check, if file is open
-if(handle)
+if (handle)
 {
     // Success
 
@@ -53,7 +51,7 @@ new File:handle = fopen("file.txt"),
     buf[128];
 
 // Check, if file is open
-if(handle)
+if (handle)
 {
     // Success
 
@@ -78,7 +76,7 @@ else
 new File:handle = fopen("file.txt", io_append);
 
 // Check, if file is open
-if(handle)
+if (handle)
 {
     // Success
 
@@ -111,17 +109,17 @@ Using an invalid handle will crash your server! Get a valid handle by using fope
 
 ## Related Functions
 
-- [fopen](../functions/fopen): Open a file.
-- [fclose](../functions/fclose): Close a file.
-- [ftemp](../functions/ftemp): Create a temporary file stream.
-- [fremove](../functions/fremove): Remove a file.
-- [fwrite](../functions/fwrite): Write to a file.
-- [fread](../functions/fread): Read a file.
-- [fputchar](../functions/fputchar): Put a character in a file.
-- [fgetchar](../functions/fgetchar): Get a character from a file.
-- [fblockwrite](../functions/fblockwrite): Write blocks of data into a file.
-- [fblockread](../functions/fblockread): Read blocks of data from a file.
-- [fseek](../functions/fseek): Jump to a specific character in a file.
-- [flength](../functions/flength): Get the file length.
-- [fexist](../functions/fexist): Check, if a file exists.
-- [fmatch](../functions/fmatch): Check, if patterns with a file name matches.
+- [fopen](fopen): Open a file.
+- [fclose](fclose): Close a file.
+- [ftemp](ftemp): Create a temporary file stream.
+- [fremove](fremove): Remove a file.
+- [fwrite](fwrite): Write to a file.
+- [fread](fread): Read a file.
+- [fputchar](fputchar): Put a character in a file.
+- [fgetchar](fgetchar): Get a character from a file.
+- [fblockwrite](fblockwrite): Write blocks of data into a file.
+- [fblockread](fblockread): Read blocks of data from a file.
+- [fseek](fseek): Jump to a specific character in a file.
+- [flength](flength): Get the file length.
+- [fexist](fexist): Check, if a file exists.
+- [fmatch](fmatch): Check, if patterns with a file name matches.

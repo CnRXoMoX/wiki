@@ -22,7 +22,7 @@ Checks if a vehicle has a trailer attached to it. Use GetVehicleTrailer to get t
 ## Examples
 
 ```c
-if(IsTrailerAttachedToVehicle(vehicleid))
+if (IsTrailerAttachedToVehicle(vehicleid))
 {
     printf("Vehicle %i has a trailer!", vehicleid);
 }
@@ -30,6 +30,6 @@ if(IsTrailerAttachedToVehicle(vehicleid))
 
 ## Related Functions
 
-- [GetVehicleTrailer](../../scripting/functions/GetVehicleTrailer.md): Check what trailer a vehicle is pulling.
-- [AttachTrailerToVehicle](../../scripting/functions/AttachTrailerToVehicle.md): Attach a trailer to a vehicle.
-- [DetachTrailerFromVehicle](../../scripting/functions/DetachTrailerFromVehicle.md): Detach a trailer from a vehicle.
+- [GetVehicleTrailer](GetVehicleTrailer.md): Check what trailer a vehicle is pulling.
+- [AttachTrailerToVehicle](AttachTrailerToVehicle.md): Attach a trailer to a vehicle.
+- [DetachTrailerFromVehicle](DetachTrailerFromVehicle.md): Detach a trailer from a vehicle.

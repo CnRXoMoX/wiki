@@ -5,11 +5,9 @@ description: Formats a string to include variables and other strings inside it.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -58,5 +56,5 @@ This function doesn't support packed strings.
 
 ## Related Functions
 
-- [print](../functions/print): Print a basic message to the server logs and console.
-- [printf](../functions/printf): Print a formatted message into the server logs and console.
+- [print](print): Print a basic message to the server logs and console.
+- [printf](printf): Print a formatted message into the server logs and console.

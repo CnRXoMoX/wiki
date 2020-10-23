@@ -5,11 +5,9 @@ description: This function returns the vector, that points to the upside of the 
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -36,5 +34,5 @@ This function was removed in SA-MP version 0.3b
 
 ## Related Functions
 
-- [GetPlayerCameraPos](../functions/GetPlayerCameraPos): Find out where the player's camera is.
-- [GetPlayerCameraFrontVector](../functions/GetPlayerCameraFrontVector): Get the player's camera front vector
+- [GetPlayerCameraPos](GetPlayerCameraPos): Find out where the player's camera is.
+- [GetPlayerCameraFrontVector](GetPlayerCameraFrontVector): Get the player's camera front vector

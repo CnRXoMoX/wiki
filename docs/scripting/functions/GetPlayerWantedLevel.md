@@ -2,26 +2,22 @@
 id: GetPlayerWantedLevel
 title: GetPlayerWantedLevel
 description: Gets the wanted level of a player.
-tags: ['player']
+tags: ["player"]
 ---
 
 ## Description
 
 Gets the wanted level of a player.
 
-
-| Name | Description |
-|------|-------------|
-|playerid | The ID of the player that you want to get the wanted level of.|
-
+| Name     | Description                                                    |
+| -------- | -------------------------------------------------------------- |
+| playerid | The ID of the player that you want to get the wanted level of. |
 
 ## Returns
 
 The player's wanted level.
 
-
 ## Examples
-
 
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
@@ -31,11 +27,12 @@ public OnPlayerCommandText(playerid, cmdtext[])
           // Gets the current wanted level, saves it in the variable wantedlevel
           //and then tells the player his wanted in a client message.
 
-          new wantedlevel;
-          wantedlevel = GetPlayerWantedLevel(playerid);
-          new tmp[64];
-          format(tmp, sizeof(tmp), "Your current wanted level is: %i", wantedlevel);
-          SendClientMessage(playerid, 0xFF0000FF, tmp);
+          new
+               wantedLevel = GetPlayerWantedLevel(playerid),
+               message[64];
+
+          format(message, sizeof(message), "Your current wanted level is: %i", wantedlevel);
+          SendClientMessage(playerid, 0xFF0000FF, message);
 
           return 1;
      }
@@ -43,9 +40,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 }
 ```
 
-
 ## Related Functions
 
-
--  SetPlayerWantedLevel: Set a player's wanted level.
--  PlayCrimeReportForPlayer: Play a crime report for a player.
+- [SetPlayerWantedLevel](SetPlayerWantedLevel.md): Set a player's wanted level.
+- [PlayCrimeReportForPlayer](PlayCrimeReportForPlayer.md): Play a crime report for a player.

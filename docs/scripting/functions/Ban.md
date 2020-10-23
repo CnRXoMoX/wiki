@@ -22,7 +22,7 @@ This function does not return any specific values.
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(strcmp(cmdtext, "/banme", true) == 0)
+    if (strcmp(cmdtext, "/banme", true) == 0)
     {
         // Ban the player that types this command.
         Ban(playerid);
@@ -41,7 +41,7 @@ public DelayedBan(playerid)
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(strcmp(cmdtext, "/banme", true) == 0)
+    if (strcmp(cmdtext, "/banme", true) == 0)
     {
         // Bans the player who executed this command.
 
@@ -66,5 +66,5 @@ As of SA-MP 0.3x, any action taken directly before Ban() (such as sending a mess
 
 ## Related Functions
 
-- [BanEx](../functions/BanEx): Ban a player with a custom reason.
-- [Kick](../functions/Kick): Kick a player from the server.
+- [BanEx](BanEx): Ban a player with a custom reason.
+- [Kick](Kick): Kick a player from the server.

@@ -5,11 +5,9 @@ description: Set the player marker radius.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This Function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -34,6 +32,6 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [ShowPlayerMarkers](../functions/ShowPlayerMarkers.md): Decide if the server should show markers on the radar.
-- [SetPlayerMarkerForPlayer](../functions/SetPlayerMarkerForPlayer.md): Set a player's marker.
-- [LimitGlobalChatRadius](../functions/LimitGlobalChatRadius.md): Limit the distance between players needed to see their chat.
+- [ShowPlayerMarkers](ShowPlayerMarkers.md): Decide if the server should show markers on the radar.
+- [SetPlayerMarkerForPlayer](SetPlayerMarkerForPlayer.md): Set a player's marker.
+- [LimitGlobalChatRadius](LimitGlobalChatRadius.md): Limit the distance between players needed to see their chat.

@@ -5,11 +5,9 @@ description: Clear any animations applied to an actor.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -28,20 +26,20 @@ Clear any animations applied to an actor.
 ## Examples
 
 ```c
-new MyActor;
+new gMyActor;
 
 public OnGameModeInit()
 {
-    MyActor = CreateActor(...);
+    gMyActor = CreateActor(...);
 }
 
 // Somewhere else
-ApplyActorAnimation(MyActor, ...);
+ApplyActorAnimation(gMyActor, ...);
 
 // Somewhere else
-ClearActorAnimations(MyActor);
+ClearActorAnimations(gMyActor);
 ```
 
 ## Related Functions
 
-- [ApplyActorAnimation](../../scripting/functions/ApplyActorAnimation.md): Apply an animation to an actor.
+- [ApplyActorAnimation](ApplyActorAnimation.md): Apply an animation to an actor.

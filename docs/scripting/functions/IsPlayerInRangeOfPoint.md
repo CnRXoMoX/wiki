@@ -5,11 +5,9 @@ description: Checks if a player is in range of a point.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -45,6 +43,6 @@ if (!strcmp("/stadium", cmdtext))
 
 ## Related Functions
 
-- [GetPlayerDistanceFromPoint](../../scripting/functions/GetPlayerDistanceFromPoint.md): Get the distance between a player and a point.
-- [GetVehicleDistanceFromPoint](../../scripting/functions/GetVehicleDistanceFromPoint.md): Get the distance between a vehicle and a point.
-- [GetPlayerPos](../../scripting/functions/GetPlayerPos.md): Get a player's position.
+- [GetPlayerDistanceFromPoint](GetPlayerDistanceFromPoint.md): Get the distance between a player and a point.
+- [GetVehicleDistanceFromPoint](GetVehicleDistanceFromPoint.md): Get the distance between a vehicle and a point.
+- [GetPlayerPos](GetPlayerPos.md): Get a player's position.

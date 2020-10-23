@@ -2,39 +2,39 @@
 id: GetPlayerWeapon
 title: GetPlayerWeapon
 description: Returns the ID of the weapon a player is currently holding.
-tags: ['player']
+tags: ["player"]
 ---
-
 
 ## Description
 
 Returns the ID of the weapon a player is currently holding.
 
-
-| Name | Description |
-|------|-------------|
-|playerid | The ID of the player to get the currently held weapon of.|
-
+| Name     | Description                                               |
+| -------- | --------------------------------------------------------- |
+| playerid | The ID of the player to get the currently held weapon of. |
 
 ## Returns
 
 The ID of the player's current weapon. Returns -1 if the player specified does not exist.
 
-
 ## Examples
-
 
 ```c
 public OnPlayerDeath(playerid, killerid, reason)
 {
-    if(killerid != INVALID_PLAYER_ID)
+    // Check if the killerid is not an invalid player (which means is connected).
+    if (killerid != INVALID_PLAYER_ID)
     {
-        if(GetPlayerWeapon(killerid) == 38) Ban(killerid); //Ban if they have a minigun
+        // The WEAPON_MINIGUN constant is pre-defined in the standard library and is equal to 38.
+        if (GetPlayerWeapon(killerid) == WEAPON_MINIGUN)
+        {
+            //Ban if they have a minigun
+            Ban(killerid);
+        }
     }
     return 1;
 }
 ```
-
 
 ## Notes
 
@@ -44,17 +44,14 @@ When the player state is PLAYER_STATE_DRIVER or PLAYER_STATE_PASSENGER this func
 
 :::
 
-
 :::warning
 
 Sometimes the result can be -1 which is an invalid weapon ID. Circumstances of this are not yet known, but it is best to discard information when returned weapon is -1.
 
 :::
 
-
 ## Related Functions
 
-
--  GetPlayerWeaponData: Find out information about weapons a player has.
--  GivePlayerWeapon: Give a player a weapon.
--  ResetPlayerWeapons: Remove all weapons from a player.
+- [GetPlayerWeaponData](GetPlayerWeaponData.md): Find out information about weapons a player has.
+- [GivePlayerWeapon](GivePlayerWeapon.md): Give a player a weapon.
+- [ResetPlayerWeapons](ResetPlayerWeapons.md): Remove all weapons from a player.

@@ -5,11 +5,9 @@ description: This callback is called when a player gives damage to an actor.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This callback was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn name='callback' version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -57,11 +55,11 @@ This function does not get called if the actor is set invulnerable (WHICH IS BY 
 
 ## Related Functions
 
-- [CreateActor](../../scripting/functions/CreateActor.md): Create an actor (static NPC).
-- [SetActorInvulnerable](../../scripting/functions/SetActorInvulnerable.md): Set actor invulnerable.
-- [SetActorHealth](../../scripting/functions/SetActorHealth.md): Set the health of an actor.
-- [GetActorHealth](../../scripting/functions/GetActorHealth.md): Gets the health of an actor.
-- [IsActorInvulnerable](../../scripting/functions/IsActorInvulnerable.md): Check if actor is invulnerable.
-- [IsValidActor](../../scripting/functions/IsValidActor.md): Check if actor id is valid.
-- [OnActorStreamOut](../../scripting/callbacks/OnActorStreamOut.md): Called when an actor is streamed out by a player.
-- [OnPlayerStreamIn](../../scripting/callbacks/OnPlayerStreamIn.md): Called when a player streams in for another player.
+- [CreateActor](../functions/CreateActor.md): Create an actor (static NPC).
+- [SetActorInvulnerable](../functions/SetActorInvulnerable.md): Set actor invulnerable.
+- [SetActorHealth](../functions/SetActorHealth.md): Set the health of an actor.
+- [GetActorHealth](../functions/GetActorHealth.md): Gets the health of an actor.
+- [IsActorInvulnerable](../functions/IsActorInvulnerable.md): Check if actor is invulnerable.
+- [IsValidActor](../functions/IsValidActor.md): Check if actor id is valid.
+- [OnActorStreamOut](OnActorStreamOut.md): Called when an actor is streamed out by a player.
+- [OnPlayerStreamIn](OnPlayerStreamIn.md): Called when a player streams in for another player.

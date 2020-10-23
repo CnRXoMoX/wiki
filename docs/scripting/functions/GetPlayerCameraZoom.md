@@ -5,11 +5,9 @@ description: Retrieves the game camera zoom level for a given player.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3z and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3z' />
 
 ## Description
 
@@ -35,12 +33,12 @@ SendClientMessage(playerid, -1, szString);
 
 :::tip
 
-This retrieves the zoom level of the GAME camera, not the camera WEAPON.
+This retrieves the zoom level of the GAME Camera (including Sniper scope), not the camera WEAPON.
 
 :::
 
 ## Related Functions
 
-- [GetPlayerCameraAspectRatio](../functions/GetPlayerCameraAspectRation): Get the aspect ratio of a player's camera.
-- [GetPlayerCameraPos](../functions/GetPlayerCameraPos): Find out where the player's camera is.
-- [GetPlayerCameraFrontVector](../functions/GetPlayerCameraFrontVector): Get the player's camera front vector
+- [GetPlayerCameraAspectRatio](GetPlayerCameraAspectRation): Get the aspect ratio of a player's camera.
+- [GetPlayerCameraPos](GetPlayerCameraPos): Find out where the player's camera is.
+- [GetPlayerCameraFrontVector](GetPlayerCameraFrontVector): Get the player's camera front vector

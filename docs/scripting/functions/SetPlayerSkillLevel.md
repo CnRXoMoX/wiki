@@ -5,11 +5,9 @@ description: Set the skill level of a certain weapon type for a player.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -46,5 +44,9 @@ The skill parameter is NOT the weapon ID, it is the skill type. Click here for a
 
 ## Related Functions
 
-- SetPlayerArmedWeapon: Set a player's armed weapon.
-- GivePlayerWeapon: Give a player a weapon.
+- [SetPlayerArmedWeapon](SetPlayerArmedWeapon.md): Set a player's armed weapon.
+- [GivePlayerWeapon](GivePlayerWeapon.md): Give a player a weapon.
+
+## Related Information
+
+- [Weapon Skills](../resources/weaponskills#skill-levels.md): List of weapon skills that are used to set player's skill level.

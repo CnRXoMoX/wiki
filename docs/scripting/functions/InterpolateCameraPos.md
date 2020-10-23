@@ -5,11 +5,9 @@ description: Move a player's camera from one position to another, within the set
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3e and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3e' />
 
 ## Description
 
@@ -36,7 +34,7 @@ This function does not return any specific values.
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(!strcmp(cmdtext, "/moveme", true))
+    if (!strcmp(cmdtext, "/moveme", true))
     {
         TogglePlayerSpectating(playerid, 1);
         InterpolateCameraPos(playerid, 0.0, 0.0, 10.0, 1000.0, 1000.0, 30.0, 10000, CAMERA_MOVE);
@@ -51,13 +49,12 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 :::tip
 
-Use TogglePlayerSpectating to make objects stream in for the player while the camera is moving and remove the HUD.
-The player's camera can be reset to behind the player with SetCameraBehindPlayer.
+Use TogglePlayerSpectating to make objects stream in for the player while the camera is moving and remove the HUD. The player's camera can be reset to behind the player with SetCameraBehindPlayer.
 
 :::
 
 ## Related Functions
 
-- [InterpolateCameraLookAt](../../scripting/functions/InterpolateCameraLookAt.md): Move a player's camera view from one location to another.
-- [SetPlayerCameraPos](../../scripting/functions/SetPlayerCameraPos.md): Set a player's camera position.
-- [SetPlayerCameraLookAt](../../scripting/functions/SetPlayerCameraLookAt.md): Set where a player's camera should face.
+- [InterpolateCameraLookAt](InterpolateCameraLookAt.md): Move a player's camera view from one location to another.
+- [SetPlayerCameraPos](SetPlayerCameraPos.md): Set a player's camera position.
+- [SetPlayerCameraLookAt](SetPlayerCameraLookAt.md): Set where a player's camera should face.

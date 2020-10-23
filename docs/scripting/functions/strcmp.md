@@ -5,11 +5,9 @@ description: Compares two strings to see if they are the same.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -33,15 +31,15 @@ new string1[] = "Hello World";
 new string2[] = "Hello World";
 
 // Check if the strings are the same
-if(!strcmp(string1, string2))
+if (!strcmp(string1, string2))
 
 new string3[] = "Hell";
 
 // Check if the first 4 characters match
-if(!strcmp(string2, string3, false, 4))
+if (!strcmp(string2, string3, false, 4))
 
 // Check for null strings with isnull()
-if(!strcmp(string1, string2) && !isnull(string1) && !isnull(string2))
+if (!strcmp(string1, string2) && !isnull(string1) && !isnull(string2))
 
 // Definition for isnull():
 #if !defined isnull
@@ -53,20 +51,18 @@ if(!strcmp(string1, string2) && !isnull(string1) && !isnull(string2))
 
 :::warning
 
-This function returns 0 if either string is empty. Check for null strings with isnull().
-If you compare strings from a text file, you should take in to account the 'carriage return' and 'new line' special characters (\r \n), as they are included, when using fread.
+This function returns 0 if either string is empty. Check for null strings with isnull(). If you compare strings from a text file, you should take in to account the 'carriage return' and 'new line' special characters (\r \n), as they are included, when using fread.
 
 :::
 
 ## Related Functions
 
-- [strfind](../functions/strfind): Search for a string in another string.
-- [strtok](../functions/strtok): Get the next 'token' (word/parameter) in a string.
-- [strdel](../functions/strdel): Delete part of a string.
+- [strfind](strfind): Search for a string in another string.
+- [strdel](strdel): Delete part of a string.
 - [strins](../function/strins): Insert text into a string.
 - [strlen](../function/strlen): Get the length of a string.
-- [strmid](../functions/strmid): Extract part of a string into another string.
-- [strpack](../functions/strpack): Pack a string into a destination string.
-- [strval](../functions/strval): Convert a string into an integer.
-- [strcat](../functions/strcat): Concatenate two strings into a destination reference.
+- [strmid](strmid): Extract part of a string into another string.
+- [strpack](strpack): Pack a string into a destination string.
+- [strval](strval): Convert a string into an integer.
+- [strcat](strcat): Concatenate two strings into a destination reference.
 - http://www.compuphase.com/pawn/String_Manipulation.pdf

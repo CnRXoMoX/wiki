@@ -27,7 +27,10 @@ ShowNameTags must be set to 1 to be able to show name tags with ShowPlayerNameTa
 //The player who typed /nameoff will not be able to see any other players nametag.
 if (strcmp("/nameoff", cmdtext, true) == 0)
 {
-    for(new i = GetPlayerPoolSize(); i != -1; --i) ShowPlayerNameTagForPlayer(playerid, i, false);
+    for (new i = 0; i != MAX_PLAYERS; -- i)
+    {
+        ShowPlayerNameTagForPlayer(playerid, i, false);
+    }
     GameTextForPlayer(playerid, "~W~Nametags ~R~off", 5000, 5);
     return 1;
 }
@@ -43,6 +46,6 @@ ShowNameTags must be set to 1 to be able to show name tags with ShowPlayerNameTa
 
 ## Related Functions
 
-- ShowNameTags: Set nametags on or off.
-- DisableNameTagLOS: Disable nametag Line-Of-Sight checking.
-- SetPlayerMarkerForPlayer: Set a player's marker.
+- [ShowNameTags](ShowNameTags.md): Set nametags on or off.
+- [DisableNameTagLOS](DisableNameTagLOS.md): Disable nametag Line-Of-Sight checking.
+- [SetPlayerMarkerForPlayer](SetPlayerMarkerForPlayer.md): Set a player's marker.

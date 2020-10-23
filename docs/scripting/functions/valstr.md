@@ -5,11 +5,9 @@ description: Convert an integer into a string.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -55,5 +53,5 @@ Passing a high value to this function can cause the server to freeze/crash. Fixe
 
 ## Related Functions
 
-- [strval](../functions/strval): Convert a string into an integer.
-- [strcmp](../functions/strcmp): Compare two strings to check if they are the same.
+- [strval](strval): Convert a string into an integer.
+- [strcmp](strcmp): Compare two strings to check if they are the same.

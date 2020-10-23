@@ -5,11 +5,9 @@ description: Encode a string to an UU-decoded string.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -34,5 +32,5 @@ uuencode(encodedString, normalString, 45);
 
 ## Related Functions
 
--  [Uudecode](../functions/Undecode): Decode an UU-encoded stream.
--  [Memcpy](../functions/Memcpy): Copy bytes from one location to another.
+- [Uudecode](Undecode): Decode an UU-encoded stream.
+- [Memcpy](Memcpy): Copy bytes from one location to another.

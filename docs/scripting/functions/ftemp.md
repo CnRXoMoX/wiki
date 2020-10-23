@@ -5,19 +5,13 @@ description: Creates a file in the "tmp", "temp" or root directory with random n
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
 Creates a file in the "tmp", "temp" or root directory with random name for reading and writing. The file is deleted after fclose() is used on the file.
-
-| Name | Description |
-| ---- | ----------- |
-
 
 ## Examples
 
@@ -32,12 +26,12 @@ new File:t_handle = ftemp(),
     g_char;
 
 // Check, if temporary file stream is open
-if(t_handle)
+if (t_handle)
 {
     // Success
 
     // Open "file.txt" in "read only" mode and check, if the file is open
-    if(handle = fopen("file.txt", io_read))
+    if (handle = fopen("file.txt", io_read))
     {
         // Get all the characters from "file.txt"
         while((g_char = fgetchar(handle, 0, false)) != EOF)
@@ -53,7 +47,7 @@ if(t_handle)
         fseek(t_handle, _, seek_begin);
 
         // Open "file1.txt" in "write only" mode, and check, if the file is open
-        if(handle = fopen("file1.txt", io_write))
+        if (handle = fopen("file1.txt", io_write))
         {
             // Success
 
@@ -77,7 +71,7 @@ if(t_handle)
         }
 
         // Open "file2.txt" in "write only" mode, and check, if the file is open
-        if(handle = fopen("file2.txt", io_write))
+        if (handle = fopen("file2.txt", io_write))
         {
             // Success
 
@@ -123,17 +117,17 @@ This function can crash the server when the right directory isn't created.
 
 ## Related Functions
 
-- [fopen](../functions/fopen): Open a file.
-- [fclose](../functions/fclose): Close a file.
-- [ftemp](../functions/ftemp): Create a temporary file stream.
-- [fremove](../functions/fremove): Remove a file.
-- [fwrite](../functions/fwrite): Write to a file.
-- [fread](../functions/fread): Read a file.
-- [fputchar](../functions/fputchar): Put a character in a file.
-- [fgetchar](../functions/fgetchar): Get a character from a file.
-- [fblockwrite](../functions/fblockwrite): Write blocks of data into a file.
-- [fblockread](../functions/fblockread): Read blocks of data from a file.
-- [fseek](../functions/fseek): Jump to a specific character in a file.
-- [flength](../functions/flength): Get the file length.
-- [fexist](../functions/fexist): Check, if a file exists.
-- [fmatch](../functions/fmatch): Check, if patterns with a file name matches.
+- [fopen](fopen): Open a file.
+- [fclose](fclose): Close a file.
+- [ftemp](ftemp): Create a temporary file stream.
+- [fremove](fremove): Remove a file.
+- [fwrite](fwrite): Write to a file.
+- [fread](fread): Read a file.
+- [fputchar](fputchar): Put a character in a file.
+- [fgetchar](fgetchar): Get a character from a file.
+- [fblockwrite](fblockwrite): Write blocks of data into a file.
+- [fblockread](fblockread): Read blocks of data from a file.
+- [fseek](fseek): Jump to a specific character in a file.
+- [flength](flength): Get the file length.
+- [fexist](fexist): Check, if a file exists.
+- [fmatch](fmatch): Check, if patterns with a file name matches.

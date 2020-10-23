@@ -5,11 +5,9 @@ description: Cancel object edition mode for a player.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3e and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3e' />
 
 ## Description
 
@@ -28,7 +26,7 @@ This function does not return any specific values.
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(!strcmp(cmdtext, "/stopedit", true))
+    if (!strcmp(cmdtext, "/stopedit", true))
     {
         CancelEdit(playerid);
         SendClientMessage(playerid, 0xFFFFFFFF, "SERVER: You stopped editing the object!");
@@ -40,10 +38,10 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 ## Related Functions
 
-- [SelectObject](../../scripting/functions/SelectObject.md): Select an object.
-- [EditObject](../../scripting/functions/EditObject.md): Edit an object.
-- [EditPlayerObject](../../scripting/functions/EditPlayerObject.md): Edit an object.
-- [EditAttachedObject](../../scripting/functions/EditAttachedObject.md): Edit an attached object.
-- [CreateObject](../../scripting/functions/CreateObject.md): Create an object.
-- [DestroyObject](../../scripting/functions/DestroyObject.md): Destroy an object.
-- [MoveObject](../../scripting/functions/MoveObject.md): Move an object.
+- [SelectObject](SelectObject.md): Select an object.
+- [EditObject](EditObject.md): Edit an object.
+- [EditPlayerObject](EditPlayerObject.md): Edit an object.
+- [EditAttachedObject](EditAttachedObject.md): Edit an attached object.
+- [CreateObject](CreateObject.md): Create an object.
+- [DestroyObject](DestroyObject.md): Destroy an object.
+- [MoveObject](MoveObject.md): Move an object.

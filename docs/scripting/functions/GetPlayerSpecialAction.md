@@ -15,7 +15,7 @@ Retrieves a player's current special action.
 
 ## Returns
 
-The special action of the player (see: [Special Actions](../../scripting/resources/specialactions.md)).
+The special action of the player (see: [Special Actions](../resources/specialactions.md)).
 
 ## Examples
 
@@ -23,7 +23,7 @@ The special action of the player (see: [Special Actions](../../scripting/resourc
 public OnPlayerUpdate(playerid)
 {
     // Ban players if they have a jetpack
-    if(GetPlayerSpecialAction(playerid) == SPECIAL_ACTION_USEJETPACK)
+    if (GetPlayerSpecialAction(playerid) == SPECIAL_ACTION_USEJETPACK)
     {
         Ban(playerid);
     }
@@ -33,5 +33,5 @@ public OnPlayerUpdate(playerid)
 
 ## Related Functions
 
-- SetPlayerSpecialAction: Set a player's special action.
-- GetPlayerState: Get a player's current state.
+- [SetPlayerSpecialAction](SetPlayerSpecialAction.md): Set a player's special action.
+- [GetPlayerState](GetPlayerState.md): Get a player's current state.

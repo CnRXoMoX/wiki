@@ -5,11 +5,9 @@ description: Shows the player a synchronous (only one at a time) dialog box.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -19,7 +17,7 @@ Shows the player a synchronous (only one at a time) dialog box.
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | playerid  | The ID of the player to show the dialog to.                                                                                             |
 | dialogid  | An ID to assign this dialog to, so responses can be processed. Max dialogid is 32767. Using negative values will close any open dialog. |
-| style     | The style of the dialog.                                                                                                                |
+| style     | The [style](../resources/dialogstyles.md) of the dialog.                                                                                |
 | caption[] | The title at the top of the dialog. The length of the caption can not exceed more than 64 characters before it starts to cut off.       |
 | info[]    | The text to display in the main dialog. Use \n to start a new line and \t to tabulate.                                                  |
 | button1[] | The text on the left button.                                                                                                            |
@@ -37,12 +35,14 @@ Shows the player a synchronous (only one at a time) dialog box.
 // Define the dialog IDs either with an enum:
 enum
 {
+    DIALOG_NULL,
     DIALOG_LOGIN,
     DIALOG_WELCOME,
     DIALOG_WEAPONS
 }
 
 // Alternatively, using macros:
+#define DIALOG_NULL 0
 #define DIALOG_LOGIN 1
 #define DIALOG_WELCOME 2
 #define DIALOG_WEAPONS 3
@@ -78,12 +78,11 @@ It is recommended to use enumerations (see above) or definitions (#define) to de
 
 :::tip
 
-Use color embedding for multiple colors in the text.
-Using -1 as dialogid closes all dialogs currently shown on the client's screen.
+Use color embedding for multiple colors in the text. Using -1 as dialogid closes all dialogs currently shown on the client's screen.
 
 :::
 
 ## Related Functions
 
-- TextDrawShowForPlayer: Show a textdraw for a certain player.
-- OnDialogResponse: Called when a player responds to a dialog.
+- [TextDrawShowForPlayer](TextDrawShowForPlayer.md): Show a textdraw for a certain player.
+- [OnDialogResponse](../callbacks/OnDialogResponse.md): Called when a player responds to a dialog.

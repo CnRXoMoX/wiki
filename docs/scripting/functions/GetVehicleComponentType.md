@@ -2,41 +2,37 @@
 id: GetVehicleComponentType
 title: GetVehicleComponentType
 description: Find out what type of component a certain ID is.
-tags: ['vehicle']
+tags: ["vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
 Find out what type of component a certain ID is.
 
-
-| Name | Description |
-|------|-------------|
-|component | The component ID to check.|
-
+| Name      | Description                |
+| --------- | -------------------------- |
+| component | The component ID to check. |
 
 ## Returns
 
 The component slot ID of the specified component or -1 if the component is invalid.
 
-
 ## Examples
-
 
 ```c
 public OnVehicleMod(playerid, vehicleid, componentid)
 {
-    new componentType = GetVehicleComponentType(componentid);
+    new
+        componentType = GetVehicleComponentType(componentid);
 
-    if(componentType != -1)
+    if (componentType != -1)
     {
-        new clientMessage[41];
+        new
+            clientMessage[41];
 
         format(clientMessage, sizeof(clientMessage), "You have modified your vehicle on slot %i", componentType);
         SendClientMessage(playerid, 0xFFFFFFFF, clientMessage);
@@ -50,12 +46,10 @@ public OnVehicleMod(playerid, vehicleid, componentid)
 }
 ```
 
-
 ## Related Functions
 
-
--  AddVehicleComponent: Add a component to a vehicle.
--  RemoveVehicleComponent: Remove a component from a vehicle.
--  GetVehicleComponentInSlot: Check what components a vehicle has.
--  OnVehicleMod: Called when a vehicle is modded.
--  OnEnterExitModShop: Called when a vehicle enters or exits a mod shop.
+- [AddVehicleComponent](AddVehicleComponent.md): Add a component to a vehicle.
+- [RemoveVehicleComponent](RemoveVehicleComponent.md): Remove a component from a vehicle.
+- [GetVehicleComponentInSlot](GetVehicleComponentInSlot.md): Check what components a vehicle has.
+- [OnVehicleMod](../callbacks/OnVehicleMod.md): Called when a vehicle is modded.
+- [OnEnterExitModShop](../callbacks/OnEnterExitModShop.md): Called when a vehicle enters or exits a mod shop.

@@ -5,11 +5,9 @@ description: Checks if a vehicle is streamed in for a player.
 tags: ["vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -33,9 +31,9 @@ new streamedVehicleCount;
 
 for(new v = 1; v <= MAX_VEHICLES; v++)
 {
-    if(IsVehicleStreamedIn(v, playerid))
+    if (IsVehicleStreamedIn(v, playerid))
     {
-        streamedVehicleCount++;
+        streamedVehicleCount ++;
     }
 }
 
@@ -46,8 +44,8 @@ SendClientMessage(playerid, -1, szString);
 
 ## Related Functions
 
-- [IsPlayerStreamedIn](../../scripting/functions/IsPlayerStreamedIn.md): Checks if a player is streamed in for another player.
-- [OnVehicleStreamIn](../../scripting/callbacks/OnVehicleStreamIn.md): Called when a vehicle streams in for a player.
-- [OnVehicleStreamOut](../../scripting/callbacks/OnVehicleStreamOut.md): Called when a vehicle streams out for a player.
-- [OnPlayerStreamIn](../../scripting/callbacks/OnPlayerStreamIn.md): Called when a player streams in for another player.
-- [OnPlayerStreamOut](../../scripting/callbacks/OnPlayerStreamOut.md): Called when a player streams out for another player.
+- [IsPlayerStreamedIn](IsPlayerStreamedIn.md): Checks if a player is streamed in for another player.
+- [OnVehicleStreamIn](../callbacks/OnVehicleStreamIn.md): Called when a vehicle streams in for a player.
+- [OnVehicleStreamOut](../callbacks/OnVehicleStreamOut.md): Called when a vehicle streams out for a player.
+- [OnPlayerStreamIn](../callbacks/OnPlayerStreamIn.md): Called when a player streams in for another player.
+- [OnPlayerStreamOut](../callbacks/OnPlayerStreamOut.md): Called when a player streams out for another player.

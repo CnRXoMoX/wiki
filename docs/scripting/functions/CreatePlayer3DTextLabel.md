@@ -5,11 +5,9 @@ description: Creates a 3D Text Label only for a specific player.
 tags: ["player", "3dtextlabel"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -35,12 +33,14 @@ The ID of the newly created Player 3D Text Label, or INVALID_3DTEXT_ID if the Pl
 ## Examples
 
 ```c
-if(strcmp(cmd, "/playerlabel", true) == 0)
+if (strcmp(cmd, "/playerlabel", true) == 0)
 {
-    new PlayerText3D:playertextid;
-    new Float:X, Float:Y, Float:Z;
-    GetPlayerPos( playerid, X, Y, Z );
-    playertextid = CreatePlayer3DTextLabel(playerid,"Hello\nI'm at your position",0x008080FF,X,Y,Z,40.0);
+    new
+        PlayerText3D: playerTextId,
+        Float: X, Float: Y, Float: Z;
+
+    GetPlayerPos(playerid, X, Y, Z);
+    playerTextId = CreatePlayer3DTextLabel(playerid, "Hello\nI'm at your position", 0x008080FF, X, Y, Z, 40.0);
     return 1;
 }
 ```
@@ -61,10 +61,10 @@ If text[] is empty, the server/clients next to the text might crash!
 
 ## Related Functions
 
-- [Create3DTextLabel](../../scripting/functions/Create3DTextLabel.md): Create a 3D text label.
-- [Delete3DTextLabel](../../scripting/functions/Delete3DTextLabel.md): Delete a 3D text label.
-- [Attach3DTextLabelToPlayer](../../scripting/functions/Attach3DTextLabelToPlayer.md): Attach a 3D text label to a player.
-- [Attach3DTextLabelToVehicle](../../scripting/functions/Attach3DTextLabelToVehicle.md): Attach a 3D text label to a vehicle.
-- [Update3DTextLabelText](../../scripting/functions/Update3DTextLabelText.md): Change the text of a 3D text label.
-- [DeletePlayer3DTextLabel](../../scripting/functions/DeletePlayer3DTextLabel.md): Delete a player's 3D text label.
-- [UpdatePlayer3DTextLabelText](../../scripting/functions/UpdatePlayer3DTextLabelText.md): Change the text of a player's 3D text label.
+- [Create3DTextLabel](Create3DTextLabel.md): Create a 3D text label.
+- [Delete3DTextLabel](Delete3DTextLabel.md): Delete a 3D text label.
+- [Attach3DTextLabelToPlayer](Attach3DTextLabelToPlayer.md): Attach a 3D text label to a player.
+- [Attach3DTextLabelToVehicle](Attach3DTextLabelToVehicle.md): Attach a 3D text label to a vehicle.
+- [Update3DTextLabelText](Update3DTextLabelText.md): Change the text of a 3D text label.
+- [DeletePlayer3DTextLabel](DeletePlayer3DTextLabel.md): Delete a player's 3D text label.
+- [UpdatePlayer3DTextLabelText](UpdatePlayer3DTextLabelText.md): Change the text of a player's 3D text label.

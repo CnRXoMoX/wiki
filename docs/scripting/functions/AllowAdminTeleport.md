@@ -7,7 +7,7 @@ tags: []
 
 :::warning
 
-This function, as of 0.3d, is deprecated. Please see OnPlayerClickMap.
+This function, as of 0.3d, is deprecated. Please see [OnPlayerClickMap](../callbacks/OnPlayerClickMap.md).
 
 :::
 
@@ -36,5 +36,5 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [IsPlayerAdmin](../../scripting/functions/IsPlayerAdmin.md): Checks if a player is logged into RCON.
-- [AllowPlayerTeleport](../../scripting/functions/AllowPlayerTeleport.md): Toggle waypoint teleporting for players.
+- [IsPlayerAdmin](IsPlayerAdmin.md): Checks if a player is logged into RCON.
+- [AllowPlayerTeleport](AllowPlayerTeleport.md): Toggle waypoint teleporting for players.

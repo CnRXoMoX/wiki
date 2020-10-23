@@ -15,15 +15,14 @@ Check if a player is logged in as an RCON admin.
 
 ## Returns
 
-1: Player is an RCON admin.
-0: Player is NOT an RCON admin.
+1: Player is an RCON admin. 0: Player is NOT an RCON admin.
 
 ## Examples
 
 ```c
 public OnPlayerSpawn(playerid)
 {
-    if(IsPlayerAdmin(playerid))
+    if (IsPlayerAdmin(playerid))
     {
         SendClientMessageToAll(0xDEEE20FF, "An admin spawned.");
     }
@@ -33,8 +32,8 @@ public OnPlayerSpawn(playerid)
 
 ## Related Functions
 
-- [SendRconCommand](../../scripting/functions/SendRconCommand.md): Sends an RCON command via the script.
+- [SendRconCommand](SendRconCommand.md): Sends an RCON command via the script.
 
 ## Related Callbacks
 
-- [OnRconLoginAttempt](../../scripting/callbacks/OnRconLoginAttempt.md): Called when an attempt to login to RCON is made.
+- [OnRconLoginAttempt](../callbacks/OnRconLoginAttempt.md): Called when an attempt to login to RCON is made.

@@ -5,11 +5,9 @@ description: Get an argument that was passed to a function.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -42,5 +40,5 @@ public OnFilterScriptInit()
 
 ## Related Functions
 
-- [numargs](../functions/numargs): Return the number of arguments.
-- [setarg](../functions/setarg): Set an argument.
+- [numargs](numargs): Return the number of arguments.
+- [setarg](setarg): Set an argument.

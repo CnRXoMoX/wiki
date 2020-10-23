@@ -5,19 +5,13 @@ description: Enable friendly fire for team vehicles.
 tags: ["vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3x and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3x' />
 
 ## Description
 
 Enable friendly fire for team vehicles. Players will be unable to damage teammates' vehicles (SetPlayerTeam must be used!).
-
-| Name | Description |
-| ---- | ----------- |
-
 
 ## Examples
 
@@ -31,4 +25,4 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [SetPlayerTeam](../functions/SetPlayerTeam): Set a player's team.
+- [SetPlayerTeam](SetPlayerTeam): Set a player's team.

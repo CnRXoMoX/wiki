@@ -23,7 +23,7 @@ This function does not return any specific values.
 ```c
 public OnPlayerCommandText( playerid, cmdtext[] )
 {
-    if(!strcmp(cmdtext, "/banme", true))
+    if (!strcmp(cmdtext, "/banme", true))
     {
         // Bans the player who executed this command and includes a reason ("Request")
         BanEx(playerid, "Request");
@@ -50,7 +50,7 @@ stock BanExWithMessage(playerid, color, message[], reason[])
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(strcmp(cmdtext, "/banme", true) == 0)
+    if (strcmp(cmdtext, "/banme", true) == 0)
     {
         //Bans the player who executed this command.
         BanExWithMessage(playerid, 0xFF0000FF, "You have been banned!", "Request");
@@ -70,5 +70,5 @@ As of SA-MP 0.3x, any action taken directly before BanEx() (such as sending a me
 
 ## Related Functions
 
-- [Ban](../functions/Ban): Ban a player from playing on the server.
-- [Kick](../functions/Kick): Kick a player from the server.
+- [Ban](Ban): Ban a player from playing on the server.
+- [Kick](Kick): Kick a player from the server.

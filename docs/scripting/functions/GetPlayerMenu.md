@@ -20,7 +20,7 @@ The ID of the player's currently shown menu, or INVALID_MENU (255) if no menu sh
 ## Examples
 
 ```c
-new Menu:CurrentMenu = GetPlayerMenu(playerid); // Store the player's current menu in 'CurrentMenu'
+new Menu:currentMenu = GetPlayerMenu(playerid); // Store the player's current menu in 'CurrentMenu'
 ```
 
 ## Notes
@@ -33,10 +33,10 @@ Returns previous menu when none is displayed.
 
 ## Related Functions
 
-- ShowMenuForPlayer: Show a menu for a player.
-- HideMenuForPlayer: Hide a menu for a player.
-- CreateMenu: Create a menu.
-- DestroyMenu: Destroy a menu.
-- AddMenuItem: Add an item to a menu.
-- OnPlayerSelectedMenuRow: Called when a player selected a row in a menu.
-- OnPlayerExitedMenu: Called when a player exits a menu.
+- [ShowMenuForPlayer](ShowMenuForPlayer.md): Show a menu for a player.
+- [HideMenuForPlayer](HideMenuForPlayer.md): Hide a menu for a player.
+- [CreateMenu](CreateMenu.md): Create a menu.
+- [DestroyMenu](DestroyMenu.md): Destroy a menu.
+- [AddMenuItem](AddMenuItem.md): Add an item to a menu.
+- [OnPlayerSelectedMenuRow](../callbacks/OnPlayerSelectedMenuRow.md): Called when a player selected a row in a menu.
+- [OnPlayerExitedMenu](../callbacks/OnPlayerExitedMenu.md): Called when a player exits a menu.

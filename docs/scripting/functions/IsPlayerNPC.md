@@ -5,11 +5,9 @@ description: Check if a player is an actual player or an NPC.
 tags: ["player", "npc"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -30,15 +28,17 @@ Check if a player is an actual player or an NPC.
 ```c
 public OnPlayerConnect(playerid)
 {
-    if(IsPlayerNPC(playerid))
+    if (IsPlayerNPC(playerid))
     {
-    SendClientMessageToAll(-1, "An NPC connected!");
-    return 1;
+        SendClientMessageToAll(-1, "An NPC connected!");
+        return 1;
     }
+
+    // The other code here won't be executed unless its a player
 }
 ```
 
 ## Related Functions
 
-- [ConnectNPC](../../scripting/functions/ConnectNPC.md): Connect an NPC.
-- [IsPlayerAdmin](../../scripting/functions/IsPlayerAdmin.md): Checks if a player is logged into RCON.
+- [ConnectNPC](ConnectNPC.md): Connect an NPC.
+- [IsPlayerAdmin](IsPlayerAdmin.md): Checks if a player is logged into RCON.

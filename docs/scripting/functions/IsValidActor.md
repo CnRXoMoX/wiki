@@ -5,11 +5,9 @@ description: Checks if an actor ID is valid.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
@@ -28,14 +26,14 @@ Checks if an actor ID is valid.
 ## Examples
 
 ```c
-new MyActor;
+new gMyActor;
 
 public OnGameModeInit()
 {
-    MyActor = CreateActor(179, 316.1, -134.0, 999.6, 90.0); // Actor as a salesperson in Ammunation.
-    if(IsValidActor(MyActor))
+    gMyActor = CreateActor(179, 316.1, -134.0, 999.6, 90.0); // Actor as a salesperson in Ammunation.
+    if (IsValidActor(gMyActor))
     {
-        SetActorHealth(MyActor, 100);
+        SetActorHealth(gMyActor, 100);
     }
     return 1;
 }
@@ -43,6 +41,6 @@ public OnGameModeInit()
 
 ## Related Functions
 
-- [CreateActor](../../scripting/functions/CreateActor.md): Create an actor.
-- [GetActorPoolSize](../../scripting/functions/GetActorPoolSize.md): Gets the highest actorid created on the server.
-- [SetActorHealth](../../scripting/functions/SetActorHealth.md): Set the health of an actor.
+- [CreateActor](CreateActor.md): Create an actor.
+- [GetActorPoolSize](GetActorPoolSize.md): Gets the highest actorid created on the server.
+- [SetActorHealth](SetActorHealth.md): Set the health of an actor.

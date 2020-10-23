@@ -5,11 +5,9 @@ description: This callback is called when a player clicks on a textdraw or cance
 tags: ["player", "textdraw"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This callback was added in SA-MP 0.3e and will not work in earlier versions!
-
-:::
+<T.VersionWarn name='callback' version='SA-MP 0.3e' />
 
 ## Description
 
@@ -46,7 +44,7 @@ public OnGameModeInit()
 
 public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 {
-    if(newkeys == KEY_SUBMISSION)
+    if (newkeys == KEY_SUBMISSION)
     {
         TextDrawShowForPlayer(playerid, gTextDraw);
         SelectTextDraw(playerid, 0xFF4040AA);
@@ -56,7 +54,7 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 
 public OnPlayerClickTextDraw(playerid, Text:clickedid)
 {
-    if(clickedid == gTextDraw)
+    if (clickedid == gTextDraw)
     {
          SendClientMessage(playerid, 0xFFFFFFAA, "You clicked on a textdraw.");
          CancelSelectTextDraw(playerid);
@@ -70,12 +68,11 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
 
 :::warning
 
-The clickable area is defined by TextDrawTextSize. The x and y parameters passed to that function must not be zero or negative.
-Do not use CancelSelectTextDraw unconditionally within this callback. This results in an infinite loop.
+The clickable area is defined by TextDrawTextSize. The x and y parameters passed to that function must not be zero or negative. Do not use CancelSelectTextDraw unconditionally within this callback. This results in an infinite loop.
 
 :::
 
 ## Related Functions
 
-- [OnPlayerClickPlayerTextDraw](../../scripting/callbacks/OnPlayerClickPlayerTextDraw.md): Called when a player clicks on a player-textdraw.
-- [OnPlayerClickPlayer](../../scripting/callbacks/OnPlayerClickPlayer.md): Called when a player click on another.
+- [OnPlayerClickPlayerTextDraw](OnPlayerClickPlayerTextDraw.md): Called when a player clicks on a player-textdraw.
+- [OnPlayerClickPlayer](OnPlayerClickPlayer.md): Called when a player click on another.

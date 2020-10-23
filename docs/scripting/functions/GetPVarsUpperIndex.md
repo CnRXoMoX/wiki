@@ -32,7 +32,10 @@ for(new i=0; i != PVarUpperIndex; i++) // Loop through all pVar IDs under the u
     new pVarName[128];
     GetPVarNameAtIndex(playerid, i, pVarName, sizeof(pVarName));
     // If the var is set (type not 0), increment pVarCount.
-    if(GetPVarType(playerid, pVarName) != 0) pVarCount++;
+    if (GetPVarType(playerid, pVarName) != 0)
+    {
+        pVarCount++;
+    }
 }
 
 new szString[66];
@@ -42,5 +45,5 @@ SendClientMessage(playerid, -1, szString);
 
 ## Related Functions
 
-- GetPVarNameAtIndex: Get the player variable's name from its index.
-- GetPVarType: Get the type of the player variable.
+- [GetPVarNameAtIndex](GetPVarNameAtIndex.md): Get the player variable's name from its index.
+- [GetPVarType](GetPVarType.md): Get the type of the player variable.

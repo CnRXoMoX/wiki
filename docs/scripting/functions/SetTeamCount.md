@@ -23,12 +23,12 @@ This function does not return any specific values.
 public OnGameModeInit( )
 {
     // We use 18 teams in this use Team-Deathmatch mode, define it;
-    SetTeamCount( 18 );
+    SetTeamCount(18);
     return 1;
 }
 ```
 
 ## Related Functions
 
-- GetPlayerTeam: Check what team a player is on.
-- SetPlayerTeam: Set a player's team.
+- [GetPlayerTeam](GetPlayerTeam.md): Check what team a player is on.
+- [SetPlayerTeam](SetPlayerTeam.md): Set a player's team.

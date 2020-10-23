@@ -5,11 +5,9 @@ description: Enter edition mode for an attached object.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3e and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3e' />
 
 ## Description
 
@@ -34,7 +32,7 @@ public OnPlayerSpawn(playerid)
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(!strcmp(cmdtext, "/edit", true))
+    if (!strcmp(cmdtext, "/edit", true))
     {
         EditAttachedObject(playerid, 0);
         SendClientMessage(playerid, 0xFFFFFFFF, "SERVER: You now edit your attached object on index slot 0!");
@@ -54,17 +52,17 @@ You can move the camera while editing by pressing and holding the spacebar (or W
 
 :::warning
 
-Players will be able to scale objects up to a very large or negative value size. Limits should be put in place using OnPlayerEditAttachedObject to abort the edit.
+Players will be able to scale objects up to a very large or negative value size. Limits should be put in place using OnPlayerEditAttachedObject to abort the edit or clip the scale values.
 
 :::
 
 ## Related Functions
 
-- [SetPlayerAttachedObject](../functions/SetPlayerAttachedObject): Attach an object to a player
-- [RemovePlayerAttachedObject](../functions/RemovePlayerAttachedObject): Remove an attached object from a player
-- [IsPlayerAttachedObjectSlotUsed](../functions/IsPlayerAttachedObjectSlotUsed): Check whether an object is attached to a player in a specified index
-- [EditObject](../functions/EditObject): Edit an object.
-- [EditPlayerObject](../functions/EditPlayerObject): Edit an object.
-- [SelectObject](../functions/SelectObject): Select an object.
-- [CancelEdit](../functions/CancelEdit): Cancel the edition of an object.
+- [SetPlayerAttachedObject](SetPlayerAttachedObject): Attach an object to a player
+- [RemovePlayerAttachedObject](RemovePlayerAttachedObject): Remove an attached object from a player
+- [IsPlayerAttachedObjectSlotUsed](IsPlayerAttachedObjectSlotUsed): Check whether an object is attached to a player in a specified index
+- [EditObject](EditObject): Edit an object.
+- [EditPlayerObject](EditPlayerObject): Edit an object.
+- [SelectObject](SelectObject): Select an object.
+- [CancelEdit](CancelEdit): Cancel the edition of an object.
 - [OnPlayerEditAttachedObject](../callbacks/OnPlayerEditAttachedObject): Called when a player finishes editing an attached object.

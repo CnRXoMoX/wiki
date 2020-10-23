@@ -2,40 +2,31 @@
 id: GetPlayerPoolSize
 title: GetPlayerPoolSize
 description: Gets the highest playerid currently in use on the server.
-tags: ['player']
+tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3.7 and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3.7' />
 
 ## Description
 
 Gets the highest playerid currently in use on the server.
 
-
-| Name | Description |
-|------|-------------|
-
-
 ## Examples
-
 
 ```c
 FreezeAll()
 {
-    for(new i = 0, j = GetPlayerPoolSize(); i <= j; i++) // note that we assign the return value to a new variable (j) to avoid calling the function with each iteration
+    // note that we assign the return value to a new variable (j) to avoid calling the function with each iteration
+    for (new i = 0, j = GetPlayerPoolSize(); i <= j; i++)
     {
         TogglePlayerControllable(i, 0);
     }
 }
 ```
 
-
 ## Related Functions
 
-
--  GetVehiclePoolSize: Gets the highest vehicleid currently in use on the server.
--  GetMaxPlayers: Gets the maximum number of players that can join the server.
+- [GetVehiclePoolSize](GetVehiclePoolSize.md): Gets the highest vehicleid currently in use on the server.
+- [GetMaxPlayers](GetMaxPlayers.md): Gets the maximum number of players that can join the server.

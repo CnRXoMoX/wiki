@@ -2,61 +2,49 @@
 id: GetPlayerTargetPlayer
 title: GetPlayerTargetPlayer
 description: Check who a player is aiming at.
-tags: ['player']
+tags: ["player"]
 ---
 
+import T from '../../../src/components/templates.js'
 
-:::warning
-
-This function was added in SA-MP 0.3d and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3d' />
 
 ## Description
 
 Check who a player is aiming at.
 
-
-| Name | Description |
-|------|-------------|
-|playerid | The ID of the player to get the target of.|
-
+| Name     | Description                                |
+| -------- | ------------------------------------------ |
+| playerid | The ID of the player to get the target of. |
 
 ## Returns
 
 The ID of the target player, or INVALID_PLAYER_ID if none.
 
-
 ## Examples
-
 
 ```c
 public OnPlayerUpdate(playerid)
 {
     // Store the ID
-    new targetplayer = GetPlayerTargetPlayer(playerid);
-    if(GetPlayerTeam(targetplayer) == GetPlayerTeam(playerid) && targetplayer != INVALID_PLAYER_ID)
+    new playerTargetId = GetPlayerTargetPlayer(playerid);
+    if (playerTargetId != INVALID_PLAYER_ID && GetPlayerTeam(playerTargetId) == GetPlayerTeam(playerid))
     {
         GameTextForPlayer(playerid, "~R~do not shoot at team-mates!", 5000, 3);
     }
 }
 ```
 
-
 ## Notes
 
 :::warning
 
-
- Does not work for joypads/controllers, and after a certain distance.
- Does not work for the sniper rifle, as it doesn't lock on to anything and as such can't and won't return a player.
+Does not work for joypads/controllers, and after a certain distance. Does not work for the sniper rifle, as it doesn't lock on to anything and as such can't and won't return a player.
 
 :::
 
-
 ## Related Functions
 
-
--  GetPlayerCameraFrontVector: Get the player's camera front vector
-- OnPlayerGiveDamage: This callback is called when a player gives damage.
-- OnPlayerTakeDamage: This callback is called when a player takes damage.
+- [GetPlayerCameraFrontVector](GetPlayerCameraFrontVector.md): Get the player's camera front vector
+- [OnPlayerGiveDamage](../callbacks/OnPlayerGiveDamage.md): This callback is called when a player gives damage.
+- [OnPlayerTakeDamage](../callbacks/OnPlayerTakeDamage.md): This callback is called when a player takes damage.

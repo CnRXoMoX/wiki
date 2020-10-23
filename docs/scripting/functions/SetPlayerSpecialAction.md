@@ -23,9 +23,9 @@ This function allows to set players special action.
 ## Examples
 
 ```c
-if(strcmp(cmd, "/handsup", true) == 0)
+if (strcmp(cmd, "/handsup", true) == 0)
 {
-    SetPlayerSpecialAction(playerid,SPECIAL_ACTION_HANDSUP);
+    SetPlayerSpecialAction(playerid, SPECIAL_ACTION_HANDSUP);
     return 1;
 }
 ```
@@ -40,5 +40,5 @@ Removing jetpacks from players by setting their special action to 0 causes the s
 
 ## Related Functions
 
-- GetPlayerSpecialAction: Get a player's current special action.
-- ApplyAnimation: Apply an animation to a player.
+- [GetPlayerSpecialAction](GetPlayerSpecialAction.md): Get a player's current special action.
+- [ApplyAnimation](ApplyAnimation.md): Apply an animation to a player.

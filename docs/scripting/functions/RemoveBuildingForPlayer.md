@@ -5,11 +5,9 @@ description: Removes a standard San Andreas model for a single player within a s
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3d and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3d' />
 
 ## Description
 
@@ -38,6 +36,7 @@ public OnPlayerConnect(playerid)
     RemoveBuildingForPlayer(playerid, 615, 0.0, 0.0, 0.0, 200.0);
     return 1;
 }
+
 public OnPlayerConnect(playerid)
 {
     // When the player connects, all map objects will be removed.
@@ -56,12 +55,11 @@ In SA-MP 0.3.7 you can use -1 for the modelid to remove all objects within the s
 
 :::warning
 
-There appears to be a limit of around 1000 lines/objects. There is no workaround.
-When removing the same object for a player, they will crash. Commonly, players crash when reconnecting to the server because the server removes buildings on OnPlayerConnect.
+There appears to be a limit of around 1000 lines/objects. There is no workaround. When removing the same object for a player, they will crash. Commonly, players crash when reconnecting to the server because the server removes buildings on OnPlayerConnect.
 
 :::
 
 ## Related Functions
 
-- [DestroyObject](../functions/DestroyObject.md): Destroy an object.
-- [DestroyPlayerObject](../functions/DestroyPlayerObject.md): Destroy a player object.
+- [DestroyObject](DestroyObject.md): Destroy an object.
+- [DestroyPlayerObject](DestroyPlayerObject.md): Destroy a player object.

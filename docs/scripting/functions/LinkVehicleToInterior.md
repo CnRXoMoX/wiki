@@ -25,12 +25,12 @@ Links a vehicle to an interior. Vehicles can only be seen by players in the same
 ```c
 public OnGameModeInit()
 {
-    new vehicle1 = AddStaticVehicle(559, 2543.7505, -21.8345, 27.1899, 52.6054, -1, -1);
-    LinkVehicleToInterior(vehicle1, 6);
+    new vehicleId = AddStaticVehicle(559, 2543.7505, -21.8345, 27.1899, 52.6054, -1, -1);
+    LinkVehicleToInterior(vehicleId, 6);
 }
 ```
 
 ## Related Functions
 
-- [SetVehicleVirtualWorld](../functions/SetVehicleVirtualWorld.md): Set the virtual world of a vehicle.
-- [SetPlayerInterior](../functions/SetPlayerInterior.md): Set a player's interior.
+- [SetVehicleVirtualWorld](SetVehicleVirtualWorld.md): Set the virtual world of a vehicle.
+- [SetPlayerInterior](SetPlayerInterior.md): Set a player's interior.

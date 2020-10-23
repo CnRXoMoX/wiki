@@ -29,7 +29,7 @@ AddMenuItem(WeaponMenu, 0, "Minigun");
 AddMenuItem(WeaponMenu, 0, "Grenades");
 
 // Under OnPlayerCommandText
-if(!strcmp(cmdtext, "/disableguns", true))
+if (!strcmp(cmdtext, "/disableguns", true))
 {
     DisableMenu(WeaponMenu); //Disable the weapon menu
     return 1;
@@ -46,6 +46,6 @@ Crashes when passed an invalid menu ID.
 
 ## Related Functions
 
-- [CreateMenu](../../scripting/functions/CreateMenu.md): Create a menu.
-- [DestroyMenu](../../scripting/functions/DestroyMenu.md): Destroy a menu.
-- [AddMenuItem](../../scripting/functions/AddMenuItem.md): Add an item to a menu.
+- [CreateMenu](CreateMenu.md): Create a menu.
+- [DestroyMenu](DestroyMenu.md): Destroy a menu.
+- [AddMenuItem](AddMenuItem.md): Add an item to a menu.

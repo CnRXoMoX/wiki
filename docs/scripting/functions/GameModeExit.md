@@ -9,14 +9,10 @@ tags: []
 
 Ends the current gamemode.
 
-| Name | Description |
-| ---- | ----------- |
-
-
 ## Examples
 
 ```c
-if(OneTeamHasWon)
+if (OneTeamHasWon)
 {
     GameModeExit();
 }

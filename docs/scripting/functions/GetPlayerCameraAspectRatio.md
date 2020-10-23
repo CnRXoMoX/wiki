@@ -5,11 +5,9 @@ description: Retrieves the aspect ratio of a player's camera.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3z and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3z' />
 
 ## Description
 
@@ -41,6 +39,6 @@ The return value of this function represents the value of the "widescreen" optio
 
 ## Related Functions
 
-- [GetPlayerCameraZoom](../functions/GetPlayerCameraZoom): Get the zoom level of a player's camera.
-- [GetPlayerCameraPos](../functions/GetPlayerCameraPos): Find out where the player's camera is.
-- [GetPlayerCameraFrontVector](../functions/GetPlayerVameraFrontVector): Get the player's camera front vector
+- [GetPlayerCameraZoom](GetPlayerCameraZoom): Get the zoom level of a player's camera.
+- [GetPlayerCameraPos](GetPlayerCameraPos): Find out where the player's camera is.
+- [GetPlayerCameraFrontVector](GetPlayerVameraFrontVector): Get the player's camera front vector

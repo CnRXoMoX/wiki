@@ -5,11 +5,9 @@ description: Copy bytes from one location to another.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -31,8 +29,10 @@ True on success, false on failure.
 
 ```c
 //Concatenate two strings with memcpy
-new destination[64] = "This is ";
-new source[] = "a string in a 32 Bit Array";
+new
+	destination[64] = "This is ",
+	source[] = "a string in a 32 Bit Array";
+
 memcpy(destination, source, strlen(destination) * 4, sizeof source * 4, sizeof destination);
 print(destination);
 //Output: This is a string in a 32 Bit Array
@@ -40,13 +40,12 @@ print(destination);
 
 ## Related Functions
 
-- [strcmp](../functions/strcmp.md): Compare two strings to see if they are the same.
-- [strfind](../functions/strfind.md): Search for a substring in a string.
-- [strtok](../functions/strtok.md): Search for a variable typed after a space.
-- [strdel](../functions/strdel.md): Delete part/all of a string.
-- [strins](../functions/strins.md): Put a string into another string.
-- [strlen](../functions/strlen.md): Check the length of a string.
-- [strmid](../functions/strmid.md): Extract characters from a string.
-- [strpack](../functions/strpack.md): Pack a string into a destination.
-- [strval](../functions/strval.md): Find the value of a string.
-- [strcat](../functions/strcat.md): Concatenate two strings.
+- [strcmp](strcmp.md): Compare two strings to see if they are the same.
+- [strfind](strfind.md): Search for a substring in a string.
+- [strdel](strdel.md): Delete part/all of a string.
+- [strins](strins.md): Put a string into another string.
+- [strlen](strlen.md): Check the length of a string.
+- [strmid](strmid.md): Extract characters from a string.
+- [strpack](strpack.md): Pack a string into a destination.
+- [strval](strval.md): Find the value of a string.
+- [strcat](strcat.md): Concatenate two strings.

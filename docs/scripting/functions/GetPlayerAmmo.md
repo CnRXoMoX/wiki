@@ -22,9 +22,11 @@ The amount of ammo in the player's current weapon.
 ```c
 ShowPlayerAmmo(playerid)
 {
-    new ammo = GetPlayerAmmo(playerid);
-    new infoString[16];
-    format(infoString, sizeof(infoString), "Ammo: %i", ammo);
+    new
+        plyAmmo = GetPlayerAmmo(playerid),
+        infoString[16];
+
+    format(infoString, sizeof(infoString), "Ammo: %i", plyAmmo);
     SendClientMessage(playerid, -1, infoString);
 }
 ```
@@ -39,5 +41,5 @@ The ammo can hold 16-bit values, therefore values over 32767 will return erroneo
 
 ## Related Functions
 
-- [SetPlayerAmmo](../functions/SetPlayerAmmo): Set the ammo of a specific player's weapon.
-- [GetPlayerWeaponData](../functions/GetPlayerWeaponData): Find out information about weapons a player has.
+- [SetPlayerAmmo](SetPlayerAmmo): Set the ammo of a specific player's weapon.
+- [GetPlayerWeaponData](GetPlayerWeaponData): Find out information about weapons a player has.

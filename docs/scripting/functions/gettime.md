@@ -5,11 +5,9 @@ description: Get the current server time, which will be stored in the variables 
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -28,10 +26,15 @@ The function itself returns a Unix Timestamp.
 ## Examples
 
 ```c
-new Hour, Minute, Second, Timestamp;
-Timestamp = gettime(Hour, Minute, Second);
-printf("%02d:%02d:%02d", Hour, Minute, Second);
-printf("Seconds since midnight 1st January 1970: %d", Timestamp);
+new
+	hours,
+	minutes,
+	seconds,
+	timestamp;
+
+timestamp = gettime(hours, minutes, seconds);
+printf("%02d:%02d:%02d", hours, minutes, seconds);
+printf("Seconds since midnight 1st January 1970: %d", timestamp);
 ```
 
 ## Notes
@@ -44,4 +47,4 @@ This function is useful for measuring time intervals by using its timestamp char
 
 ## Related Functions
 
-- getdate: Get the current date of the server.
+- [getdate](getdate.md): Get the current date of the server.

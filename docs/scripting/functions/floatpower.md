@@ -5,11 +5,9 @@ description: Raises the given value to the power of the exponent.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -33,5 +31,5 @@ printf("2 to the power of 8 is %f", floatpower(2.0, 8.0));
 
 ## Related Functions
 
-- [floatsqroot](../functions/floatsqroot): Calculate the square root of a floating point value.
-- [floatlog](../functions/floatlog): Get the logarithm of the float value.
+- [floatsqroot](floatsqroot): Calculate the square root of a floating point value.
+- [floatlog](floatlog): Get the logarithm of the float value.

@@ -4,11 +4,9 @@ description: This function can be used as a replacement for GetTickCount, as it 
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -24,4 +22,4 @@ The number of milliseconds since start-up of the system. For a 32-bit cell, this
 
 ## Related Functions
 
-- [GetTickCount](../functions/GetTickCount.md): Get the uptime of the actual server.
+- [GetTickCount](GetTickCount.md): Get the uptime of the actual server.

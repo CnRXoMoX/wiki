@@ -28,20 +28,20 @@ The ID of the object that was created, or INVALID_OBJECT_ID if the object limit 
 ## Examples
 
 ```c
-new pObject[MAX_PLAYERS];
+new gObject[MAX_PLAYERS];
 
 public OnPlayerConnect(playerid)
 {
-    pObject[playerid] = CreatePlayerObject(playerid, 2587, 2001.195679, 1547.113892, 14.283400, 0, 0, 96);
+    gObject[playerid] = CreatePlayerObject(playerid, 2587, 2001.195679, 1547.113892, 14.283400, 0, 0, 96);
 
     // Or alternatively, using the DrawDistance parameter to show it from as far away as possible:
-    pObject[playerid] = CreatePlayerObject(playerid, 2587, 2001.195679, 1547.113892, 14.283400, 0, 0, 96, 300.0);
+    gObject[playerid] = CreatePlayerObject(playerid, 2587, 2001.195679, 1547.113892, 14.283400, 0, 0, 96, 300.0);
     return 1;
 }
 
 public OnPlayerDisconnect(playerid, reason)
 {
-    DestroyPlayerObject(playerid, pObject[playerid]);
+    DestroyPlayerObject(playerid, gObject[playerid]);
     return 1;
 }
 ```
@@ -56,22 +56,22 @@ The 'DrawDistance' parameter was added in 0.3b. It must be left out in scripts f
 
 ## Related Functions
 
-- [DestroyPlayerObject](../../scripting/functions/DestroyPlayerObject.md): Destroy a player object.
-- [IsValidPlayerObject](../../scripting/functions/IsValidPlayerObject.md): Checks if a certain player object is vaild.
-- [MovePlayerObject](../../scripting/functions/MovePlayerObject.md): Move a player object.
-- [StopPlayerObject](../../scripting/functions/StopPlayerObject.md): Stop a player object from moving.
-- [SetPlayerObjectPos](../../scripting/functions/SetPlayerObjectPos.md): Set the position of a player object.
-- [SetPlayerObjectRot](../../scripting/functions/SetPlayerObjectRot.md): Set the rotation of a player object.
-- [GetPlayerObjectPos](../../scripting/functions/GetPlayerObjectPos.md): Locate a player object.
-- [GetPlayerObjectRot](../../scripting/functions/GetPlayerObjectRot.md): Check the rotation of a player object.
-- [AttachPlayerObjectToPlayer](../../scripting/functions/AttachPlayerObjectToPlayer.md): Attach a player object to a player.
-- [CreateObject](../../scripting/functions/CreateObject.md): Create an object.
-- [DestroyObject](../../scripting/functions/DestroyObject.md): Destroy an object.
-- [IsValidObject](../../scripting/functions/IsValidObject.md): Checks if a certain object is vaild.
-- [MoveObject](../../scripting/functions/MoveObject.md): Move an object.
-- [StopObject](../../scripting/functions/StopObject.md): Stop an object from moving.
-- [SetObjectPos](../../scripting/functions/SetObjectPos.md): Set the position of an object.
-- [SetObjectRot](../../scripting/functions/SetObjectRot.md): Set the rotation of an object.
-- [GetObjectPos](../../scripting/functions/GetObjectPos.md): Locate an object.
-- [GetObjectRot](../../scripting/functions/GetObjectRot.md): Check the rotation of an object.
-- [AttachObjectToPlayer](../../scripting/functions/AttachObjectToPlayer.md): Attach an object to a player.
+- [DestroyPlayerObject](DestroyPlayerObject.md): Destroy a player object.
+- [IsValidPlayerObject](IsValidPlayerObject.md): Checks if a certain player object is vaild.
+- [MovePlayerObject](MovePlayerObject.md): Move a player object.
+- [StopPlayerObject](StopPlayerObject.md): Stop a player object from moving.
+- [SetPlayerObjectPos](SetPlayerObjectPos.md): Set the position of a player object.
+- [SetPlayerObjectRot](SetPlayerObjectRot.md): Set the rotation of a player object.
+- [GetPlayerObjectPos](GetPlayerObjectPos.md): Locate a player object.
+- [GetPlayerObjectRot](GetPlayerObjectRot.md): Check the rotation of a player object.
+- [AttachPlayerObjectToPlayer](AttachPlayerObjectToPlayer.md): Attach a player object to a player.
+- [CreateObject](CreateObject.md): Create an object.
+- [DestroyObject](DestroyObject.md): Destroy an object.
+- [IsValidObject](IsValidObject.md): Checks if a certain object is vaild.
+- [MoveObject](MoveObject.md): Move an object.
+- [StopObject](StopObject.md): Stop an object from moving.
+- [SetObjectPos](SetObjectPos.md): Set the position of an object.
+- [SetObjectRot](SetObjectRot.md): Set the rotation of an object.
+- [GetObjectPos](GetObjectPos.md): Locate an object.
+- [GetObjectRot](GetObjectRot.md): Check the rotation of an object.
+- [AttachObjectToPlayer](AttachObjectToPlayer.md): Attach an object to a player.

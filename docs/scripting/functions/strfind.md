@@ -5,11 +5,9 @@ description: Search for a sub string in a string.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
@@ -29,7 +27,7 @@ The number of characters before the sub string (the sub string's start position)
 ## Examples
 
 ```c
-if(strfind("Are you in here?", "you", true) != -1) //returns 4, because the start of 'you' (y) is at index 4 in the string
+if (strfind("Are you in here?", "you", true) != -1) //returns 4, because the start of 'you' (y) is at index 4 in the string
 {
     SendClientMessageToAll(0xFFFFFFFF, "I found you!");
 }
@@ -37,12 +35,11 @@ if(strfind("Are you in here?", "you", true) != -1) //returns 4, because the sta
 
 ## Related Functions
 
-- [strcmp](../functions/strcmp): Compare two strings to check if they are the same.
-- [strtok](../functions/strtok): Get the next 'token' (word/parameter) in a string.
-- [strins](../function/strins): Insert text into a string.
-- [strlen](../function/strlen): Get the length of a string.
-- [strmid](../functions/strmid): Extract part of a string into another string.
-- [strpack](../functions/strpack): Pack a string into a destination string.
-- [strval](../functions/strval): Convert a string into an integer.
-- [strcat](../functions/strcat): Concatenate two strings into a destination reference.
-- [strdel](../functions/strdel): Delete part of a string.
+- [strcmp](strcmp.md): Compare two strings to check if they are the same.
+- [strdel](strdel.md): Delete part of a string.
+- [strins](strins.md): Insert text into a string.
+- [strlen](strlen.md): Get the length of a string.
+- [strmid](strmid.md): Extract part of a string into another string.
+- [strpack](strpack.md): Pack a string into a destination string.
+- [strval](strval.md): Convert a string into an integer.
+- [strcat](strcat.md): Concatenate two strings into a destination reference.

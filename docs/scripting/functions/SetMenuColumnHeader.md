@@ -22,16 +22,16 @@ This function does not return any specific values.
 ## Examples
 
 ```c
-new Menu:TestMenu;
+new Menu: gTestMenu;
 
 // There are two rows in this menu
-TestMenu = CreateMenu("Menu Header", 2, 200.0, 100.0, 150.0, 150.0);
-SetMenuColumnHeader(TestMenu, 0, "Row 1");
-SetMenuColumnHeader(TestMenu, 1, "Row 2");
+gTestMenu = CreateMenu("Menu Header", 2, 200.0, 100.0, 150.0, 150.0);
+SetMenuColumnHeader(gTestMenu, 0, "Row 1");
+SetMenuColumnHeader(gTestMenu, 1, "Row 2");
 
 // Add menu items to it.
-AddMenuItem(TestMenu, 0, "Row1 Item1");
-AddMenuItem(TestMenu, 1, "Row2 Item1");
+AddMenuItem(gTestMenu, 0, "Row1 Item1");
+AddMenuItem(gTestMenu, 1, "Row2 Item1");
 ```
 
 ## Notes
@@ -50,6 +50,6 @@ Note that you can add only 12 items with AddMenuItem. The 13th object of a menu 
 
 ## Related Functions
 
-- [AddMenuItem](../../scripting/functions/AddMenuItem.md): Add an item to a menu.
-- [CreateMenu](../../scripting/functions/CreateMenu.md): Create a menu.
-- [OnPlayerSelectedMenuRow](../../scripting/callbacks/OnPlayerSelectedMenuRow.md): Called when a player selected a row in a menu.
+- [AddMenuItem](AddMenuItem.md): Add an item to a menu.
+- [CreateMenu](CreateMenu.md): Create a menu.
+- [OnPlayerSelectedMenuRow](../callbacks/OnPlayerSelectedMenuRow.md): Called when a player selected a row in a menu.

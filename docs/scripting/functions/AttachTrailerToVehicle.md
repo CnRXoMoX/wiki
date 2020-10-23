@@ -21,22 +21,22 @@ This function always returns 1, even if neither of the vehicle IDs passed are va
 ## Examples
 
 ```c
-new vehicleid = CreateVehicle(...);
-new trailerid = CreateVehicle(...);
+new vehicleId = CreateVehicle(...);
+new trailerId = CreateVehicle(...);
 
-AttachTrailerToVehicle(trailerid, vehicleid);
+AttachTrailerToVehicle(trailerId, vehicleId);
 ```
 
 ## Notes
 
 :::warning
 
-This will only work if both vehicles are streamed in for a player (check IsVehicleStreamedIn).
+This will only work if both vehicles are streamed in for a player (check [IsVehicleStreamedIn](IsVehicleStreamedIn)).
 
 :::
 
 ## Related Functions
 
-- [DetachTrailerFromVehicle](../../scripting/functions/DetachTrailerFromVehicle.md): Detach a trailer from a vehicle.
-- [IsTrailerAttachedToVehicle](../../scripting/functions/IsTrailerAttachedToVehicle.md): Check if a trailer is attached to a vehicle.
-- [GetVehicleTrailer](../../scripting/functions/GetVehicleTrailer.md): Check what trailer a vehicle is pulling.
+- [DetachTrailerFromVehicle](DetachTrailerFromVehicle.md): Detach a trailer from a vehicle.
+- [IsTrailerAttachedToVehicle](IsTrailerAttachedToVehicle.md): Check if a trailer is attached to a vehicle.
+- [GetVehicleTrailer](GetVehicleTrailer.md): Check what trailer a vehicle is pulling.

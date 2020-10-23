@@ -5,11 +5,9 @@ description: Remove an attached object from a player.
 tags: ["player"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3c and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3c' />
 
 ## Description
 
@@ -29,11 +27,11 @@ Remove an attached object from a player.
 ```c
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-    if(!strmp(cmdtext, "/remao", true)) // Remove Attached Objects
+    if (!strmp(cmdtext, "/remao", true)) // Remove Attached Objects
     {
         for(new i=0; i<MAX_PLAYER_ATTACHED_OBJECTS; i++)
         {
-            if(IsPlayerAttachedObjectSlotUsed(playerid, i)) RemovePlayerAttachedObject(playerid, i);
+            if (IsPlayerAttachedObjectSlotUsed(playerid, i)) RemovePlayerAttachedObject(playerid, i);
         }
         return 1;
     }
@@ -43,5 +41,5 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 ## Related Functions
 
-- [SetPlayerAttachedObject](../functions/SetPlayerAttachedObject.md): Attach an object to a player
-- [IsPlayerAttachedObjectSlotUsed](../functions/IsPlayerAttachedObjectSlotUsed.md): Check whether an object is attached to a player in a specified index
+- [SetPlayerAttachedObject](SetPlayerAttachedObject.md): Attach an object to a player
+- [IsPlayerAttachedObjectSlotUsed](IsPlayerAttachedObjectSlotUsed.md): Check whether an object is attached to a player in a specified index

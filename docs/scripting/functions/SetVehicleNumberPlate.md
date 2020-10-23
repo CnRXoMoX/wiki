@@ -5,11 +5,9 @@ description: Set a vehicle numberplate.
 tags: ["vehicle"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3c and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3c' />
 
 ## Description
 
@@ -29,7 +27,8 @@ Set a vehicle numberplate.
 ## Examples
 
 ```c
-new vehicleid = CreateVehicle(542, 2074.73, 1089.89, 10.51, 0.0, -1, -1, -1);
+new
+	vehicleid = CreateVehicle(542, 2074.73, 1089.89, 10.51, 0.0, -1, -1, -1);
 SetVehicleNumberPlate(vehicleid, "ABCD 123");
 ```
 
@@ -37,12 +36,7 @@ SetVehicleNumberPlate(vehicleid, "ABCD 123");
 
 :::tip
 
-This function has no internal error checking. Do not assign custom number plates to vehicles without plates (boats, planes, etc) as this will result in some unneeded processing time on the client.
-The vehicle must be re-spawned or re-streamed for the changes to take effect.
-There's a limit of 32 characters on each number plate (including embedded colors).
-The text length that can be seen on the number plate is around 9 to 10 characters, more characters will cause the text to split.
-Some vehicle models has a backward number plate, e.g. Boxville (498) (as an alternative to this vehicle you can use vehicle model ID 609, which is a duplicated Boxville (aka Boxburg), but with a regular number plate).
-This function only works in versions 0.2.1, 0.2.2, 0.2x and 0.3c (and beyond).
+This function has no internal error checking. Do not assign custom number plates to vehicles without plates (boats, planes, etc) as this will result in some unneeded processing time on the client. The vehicle must be re-spawned or re-streamed for the changes to take effect. There's a limit of 32 characters on each number plate (including embedded colors). The text length that can be seen on the number plate is around 9 to 10 characters, more characters will cause the text to split. Some vehicle models has a backward number plate, e.g. Boxville (498) (as an alternative to this vehicle you can use vehicle model ID 609, which is a duplicated Boxville (aka Boxburg), but with a regular number plate). This function only works in versions 0.2.1, 0.2.2, 0.2x and 0.3c (and beyond).
 
 :::
 
@@ -54,6 +48,6 @@ You can use color embedding on the number plate text.
 
 ## Related Functions
 
-- SetVehicleToRespawn: Respawn a vehicle.
-- ChangeVehicleColor: Set the color of a vehicle.
-- ChangeVehiclePaintjob: Change the paintjob on a vehicle.
+- [SetVehicleToRespawn](SetVehicleToRespawn.md): Respawn a vehicle.
+- [ChangeVehicleColor](ChangeVehicleColor.md): Set the color of a vehicle.
+- [ChangeVehiclePaintjob](ChangeVehiclePaintjob.md): Change the paintjob on a vehicle.

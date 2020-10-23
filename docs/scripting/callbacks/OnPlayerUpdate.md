@@ -27,7 +27,7 @@ It is always called first in filterscripts.
 public OnPlayerUpdate(playerid)
 {
     new iCurWeap = GetPlayerWeapon(playerid); // Return the player's current weapon
-    if(iCurWeap != GetPVarInt(playerid, "iCurrentWeapon")) // If he changed weapons since the last update
+    if (iCurWeap != GetPVarInt(playerid, "iCurrentWeapon")) // If he changed weapons since the last update
     {
         // Lets call a callback named OnPlayerChangeWeapon
         OnPlayerChangeWeapon(playerid, GetPVarInt(playerid, "iCurrentWeapon"), iCurWeap);
@@ -55,12 +55,12 @@ public OnPlayerUpdate(playerid)
 
     GetPlayerHealth(playerid, fHealth);
 
-    if(fHealth != GetPVarFloat(playerid, "faPlayerHealth"))
+    if (fHealth != GetPVarFloat(playerid, "faPlayerHealth"))
     {
         // Player health has changed since the last update -> server, so obviously thats the thing updated.
         // Lets do further checks see if he's lost or gained health, anti-health cheat? ;)
 
-        if(fHealth > GetPVarFloat(playerid, "faPlayerHealth"))
+        if (fHealth > GetPVarFloat(playerid, "faPlayerHealth"))
         {
             /* He has gained health! Cheating? Write your own scripts here to figure how a player
             gained health! */
@@ -77,16 +77,13 @@ public OnPlayerUpdate(playerid)
 
 ## Notes
 
-:::tip
+import T from '../../../src/components/templates.js'
 
-This callback can also be called by NPC.
-
-:::
+<T.TipNPCCallbacks />
 
 :::warning
 
-This callback is called, on average, 30 times per second, per player; only use it when you know what it's meant for (or more importantly what it's NOT meant for).
-The frequency with which this callback is called for each player varies, depending on what the player is doing. Driving or shooting will trigger a lot more updates than idling.
+This callback is called, on average, 30 times per second, per player; only use it when you know what it's meant for (or more importantly what it's NOT meant for). The frequency with which this callback is called for each player varies, depending on what the player is doing. Driving or shooting will trigger a lot more updates than idling.
 
 :::
 

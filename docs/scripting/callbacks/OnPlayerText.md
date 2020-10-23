@@ -32,13 +32,11 @@ public OnPlayerText(playerid, text[])
 
 ## Notes
 
-:::tip
+import T from '../../../src/components/templates.js'
 
-This callback can also be called by NPC.
-
-:::
+<T.TipNPCCallbacks />
 
 ## Related Functions
 
-- [SendPlayerMessageToPlayer](../../scripting/functions/SendPlayerMessageToPlayer.md): Force a player to send text for one player.
-- [SendPlayerMessageToAll](../../scripting/functions/SendPlayerMessageToAll.md): Force a player to send text for all players.
+- [SendPlayerMessageToPlayer](../functions/SendPlayerMessageToPlayer.md): Force a player to send text for one player.
+- [SendPlayerMessageToAll](../functions/SendPlayerMessageToAll.md): Force a player to send text for all players.

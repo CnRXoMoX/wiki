@@ -5,11 +5,9 @@ description: Connect an NPC to the server.
 tags: ["npc"]
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function was added in SA-MP 0.3a and will not work in earlier versions!
-
-:::
+<T.VersionWarn version='SA-MP 0.3a' />
 
 ## Description
 
@@ -44,5 +42,5 @@ NPCs do not have nametags. These can be scripted with Attach3DTextLabelToPlayer.
 
 ## Related Functions
 
-- [IsPlayerNPC](../../scripting/functions/IsPlayerNPC.md): Check if a player is an NPC or an actual player.
-- [OnPlayerConnect](../../scripting/callbacks/OnPlayerConnect.md): Called when a player connects to the server.
+- [IsPlayerNPC](IsPlayerNPC.md): Check if a player is an NPC or an actual player.
+- [OnPlayerConnect](../callbacks/OnPlayerConnect.md): Called when a player connects to the server.

@@ -5,19 +5,13 @@ description: Returns the amount of memory available for the heap/stack in bytes.
 tags: []
 ---
 
-:::warning
+import T from '../../../src/components/templates.js'
 
-This function starts with lowercase letter.
-
-:::
+<T.LowercaseNote />
 
 ## Description
 
 Returns the amount of memory available for the heap/stack in bytes.
-
-| Name | Description |
-| ---- | ----------- |
-
 
 ## Examples
 
